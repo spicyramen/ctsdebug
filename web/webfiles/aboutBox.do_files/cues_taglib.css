@@ -1,0 +1,967 @@
+/* Body */
+body {font-family:Arial;color:#000000;
+      font-size:12px;
+      position:absolute;z-index:0;top:0px;left:0px;
+      background-color:transparent; 
+      width:100%;height:100%;max-height:100%;
+      margin:0;padding:0;border:0;overflow:hidden;}
+
+/* core html elements */
+a:link             {color:#333399;text-decoration:underline;} 
+a:visited          {color:#993366;text-decoration:underline;}
+td                 {font-family:Arial;font-size:12px;color:#000000;}
+.IESmallestText td {font-size:9px;}
+.IESmallerText  td {font-size:10px;}
+.IENormalText   td {font-size:12px;}
+.IELargerText   td {font-size:14px;}
+.IELargestText  td {font-size:16px;}
+br                 {line-height:8px;clear:both;}
+
+/* common */
+.cuesBrSmall           {line-height:6px;clear:both;}
+#cues8padding          {padding:8px;}
+#cues6padding          {padding:6px;}
+.cuesNowrap            {white-space:nowrap;}
+.cuesWrap              {white-space:normal;}
+.cuesPageLoadingLayer  {z-index:100;position:absolute;top:0px;left:0px;height:1800px;width:2000px;opacity:.50;filter:alpha(opacity=50);background-color:#000000;overflow:hidden;padding:0;}
+#cuesPopupMask         {position:absolute;z-index:200;top:0px;left:0px;width:100%;height:100%;background-image/**/: url("../cues_images/spacer.gif") !important;background-repeat:repeat;visibility:hidden;}
+.cuesRTLgap            {font-size:1px;}
+cues_vml\:*            {behavior:url(#default#VML);}
+
+/* About */
+.cuesAboutProductName   {padding-left:20px;padding-top:155px;font-family:Arial;font-size:22px;color:#ffffff;}
+.IESmallestText .cuesAboutProductName {font-size:17px;}
+.IESmallerText  .cuesAboutProductName {font-size:18px;}
+.IENormalText   .cuesAboutProductName {font-size:22px;}
+.IELargerText   .cuesAboutProductName {font-size:26px;}
+.IELargestText  .cuesAboutProductName {font-size:29px;}
+.cuesAboutVersionInfo   {padding-left:20px;padding-top:8px;font-family:Arial;font-size:11px;color:#ffffff;font-weight:bold;}
+.IESmallestText .cuesAboutVersionInfo {font-size:8px;}
+.IESmallerText  .cuesAboutVersionInfo {font-size:9px;}
+.IENormalText   .cuesAboutVersionInfo {font-size:11px;}
+.IELargerText   .cuesAboutVersionInfo {font-size:13px;}
+.IELargestText  .cuesAboutVersionInfo {font-size:14px;}
+.cuesAboutLicenseInfo   {padding-left:20px;padding-top:15px;font-family:Arial;font-size:10px;color:#ffffff;font-weight:bold;}
+.IESmallestText .cuesAboutLicenseInfo {font-size:7px;}
+.IESmallerText  .cuesAboutLicenseInfo {font-size:8px;}
+.IENormalText   .cuesAboutLicenseInfo {font-size:10px;}
+.IELargerText   .cuesAboutLicenseInfo {font-size:12px;}
+.IELargestText  .cuesAboutLicenseInfo {font-size:13px;}
+.cuesAboutCopyright     {padding-left:18px;padding-top:30px;padding-bottom:15px;font-family:Arial;font-size:10px;color:#ffffff;}
+.IESmallestText .cuesAboutCopyright {font-size:7px;}
+.IESmallerText  .cuesAboutCopyright {font-size:8px;}
+.IENormalText   .cuesAboutCopyright {font-size:10px;}
+.IELargerText   .cuesAboutCopyright {font-size:12px;}
+.IELargestText  .cuesAboutCopyright {font-size:13px;}
+.cuesAboutLogo          {}
+.cuesAboutLicenseInfo a         {color:white;}
+.cuesAboutLicenseInfo a:link    {color:white;}
+.cuesAboutLicenseInfo a:visited {color:white;}
+
+
+/* Background */
+.cuesMainWindow      {background-image:url(../cues_images/pageBackground.jpg);}
+.cuesBackground      {z-index:-1;position:absolute;left:0;top:0;width:100%;height:100%;background-color:#002142;overflow:hidden;}
+.cuesBackgroundImage {width:100%;height:1024px;}
+/* Breadcrumb */
+#cuesBreadcrumbTable td      {font-family:Arial;color:#000000;font-size:11px;}
+.cuesBreadcrumbStatic        {font-family:Arial;color:#000000;font-size:11px;}
+.cuesBreadcrumbLast          {font-size:11px;color:#000000;}
+a.cuesBreadcrumbLink:link    {color:#0088c2;text-decoration:none;font-size:11px;}
+a.cuesBreadcrumbLink:visited {color:#0088c2;text-decoration:none;font-size:11px;}
+a.cuesBreadcrumbLink:hover   {color:#0088c2;text-decoration:underline;font-size:11px;}
+a.cuesBreadcrumbLink:active  {color:#0088c2;text-decoration:none;font-size:11px;}
+
+/* Button */
+#cuesButtonRowLeft, #cuesButtonRowRight {position:relative;text-align:right;margin:0;padding:0 8px 8px 8px;}
+.cuesButtonRow                          {text-align:right; margin:0; padding:0;}
+.cuesButton                             {font-size:12px;margin:0 0 0 3px;cursor:pointer;}
+.IESmallestText .cuesButton {font-size:9px;}
+.IESmallerText  .cuesButton {font-size:10px;}
+.IENormalText   .cuesButton {font-size:12px;}
+.IELargerText   .cuesButton {font-size:14px;}
+.IELargestText  .cuesButton {font-size:16px;}
+
+/* Button menu */
+.cuesButtonMenu           {border:1px solid #60e4fb;padding:0px;margin:0px;list-style-type:none;}
+.cuesButtonMenuIE         {width:10px;}
+.cuesButtonMenuIE li      {margin-bottom:-3px;}
+.cuesButtonMenu li        {display:block;height:18px;line-height:18px;color:#000000;background-color:#ffffff;}
+.cuesButtonMenu li a      {display:block;padding:0px 6px;font-family:Arial;}
+.cuesButtonMenu a:visited {color:#000000;text-decoration:none;} 
+.cuesButtonMenu a:active  {color:#000000;text-decoration:none;} 
+.cuesButtonMenu a:link    {color:#000000;text-decoration:none;} 
+.cuesButtonMenu a:hover   {color:#ffffff;text-decoration:none;background-color:#8DB71F;} 
+/* carousel */
+.cuesCarousel               {overflow:auto;position:relative;padding:0px;}
+.cuesCarouselLights         {position:absolute;right:28;}
+.cuesCarouselLight          {margin-right:3px;}
+.cuesCarouselPane           {z-index:0;position:relative;top:20;width:300px;height:100px;left:29;right:29;overflow:auto;}
+.cuesCarouselItems          {z-index:0;position:absolute;width:2048px;left:0;margin:0px;}
+.cuesCarouselItem           {position:relative;border:1px solid #8499a2;display:inline;float:left;overflow:hidden;margin-right:30px;padding:0px;}
+.cuesCarouselLayer          {z-index:-1;position:absolute;top:0px;left:0px;height:10;width:10;opacity:.67;filter:alpha(opacity=67);background-color:white;overflow:hidden;padding:0;}
+.cuesCarouselTitle          {font-size:12px;font-family:Arial;}
+.cuesCarouselTitle:link     {color:#0088c2;text-decoration:none;}
+.cuesCarouselTitle:visited  {color:#0088c2;text-decoration:none;}
+.cuesCarouselTitle:hover    {color:#0088c2;text-decoration:underline;}
+.cuesCarouselTitle:active   {color:#0088c2;text-decoration:none;}
+.cuesCarouselContent        {font-size:10px;font-family:Arial;padding:8px;}
+.cuesCarouselImage          {float:left;margin-right:8px;margin-left:0px;margin-top:0px;}
+.cuesCarouselSlideLeft      {z-index:1;position:absolute;left:0;top:50%;text-decoration:none;}
+.cuesCarouselSlideRight     {z-index:1;position:absolute;right:0;top:50%;}
+
+/* Combobox */
+.cuesComboboxContainerIE                    {display:inline;zoom:1;}
+.cuesComboboxContainerFF                    {display:table-row;}
+.cuesComboboxChoices                        {display:none;position:absolute;z-index:999;left:0px;border:1px solid #60e4fb;}
+.cuesComboboxContainerFF .cuesCombobox      {border:1px solid #53636a;display:inline;padding-left:2px;padding-top:1px;padding-bottom:3px;background-color:white;padding-right:1px;}
+.cuesComboboxContainerIE .cuesCombobox      {border:1px solid #53636a;display:inline;padding-left:2px;padding-top:1px;padding-bottom:1px;background-color:white;zoom:1;}
+.cuesComboboxInput                          {font-size:12px;border:0;padding:0;margin:0;vertical-align:middle;}
+.IESmallestText .cuesComboboxInput {font-size:9px;}
+.IESmallerText  .cuesComboboxInput {font-size:10px;}
+.IENormalText   .cuesComboboxInput {font-size:12px;}
+.IELargerText   .cuesComboboxInput {font-size:14px;}
+.IELargestText  .cuesComboboxInput {font-size:16px;}
+.cuesComboboxContainerIE .cuesComboboxArrow {vertical-align:middle;padding-right:2px;}
+.cuesComboboxContainerFF .cuesComboboxArrow {vertical-align:middle;padding-right:0px;}
+.cuesComboboxList                           {position:relative;}
+
+/* Content Area */
+#cuesContentBg                    {position:static;height:100%;border:1px solid #858A91;}
+* html #cuesContentBg             {width:100%;}
+#cuesContentTitleBg               {position:absolute;top:0px;left:0px;right:1px;height:29px;max-height:29px;border-top:1px solid #858A91;border-right:1px solid #858A91;border-left:1px solid #858A91;overflow:hidden;background-color:#6B7485;margin:0;padding: 6px 0 0 0;}
+* html #cuesContentTitleBg        {width:101%;}
+.cuesContentTitle                 {height:28px;font-family:Arial;font-size:18px;font-weight:normal;color:#000000;padding-left:5px;padding-top:6px;}
+.IESmallestText .cuesContentTitle {font-size:14px;}
+.IESmallerText  .cuesContentTitle {font-size:15px;}
+.IENormalText   .cuesContentTitle {font-size:18px;}
+.IELargerText   .cuesContentTitle {font-size:21px;}
+.IELargestText  .cuesContentTitle {font-size:23px;}
+#cuesContentBodyBg                {position:fixed;top:29px;left:0px;right:1px;bottom:1px;overflow:auto;background-color:#F8F8F8;padding:8px}
+* html #cuesContentBodyBg         {width:100%;height:100%;}
+#cuesContentTitleHelpLink         {float:right;padding-right:4px;}
+
+/* Dashboard */
+#cuesDashboard                    {table-layout:fixed;}
+.cuesDashboardCell                {vertical-align:top;}
+.cuesDashboardPane                {padding:7px;}
+.cuesDashboardPaneTitle           {line-height:20px;color:#ffffff;font-weight:bold;font-family:Arial;font-size:12px;position:relative;z-index:1;width:100%;}
+.cuesDashboardPaneTitle img       {cursor:pointer;vertical-align:middle;height:16px;margin-top:3px;margin-bottom:3px;}
+.cuesDashboardPaneTitle span      {margin-left:8px;margin-right:8px;color:#ffffff;}
+.cuesDashboardPaneTitle span img  {margin-left:1px;}
+.cuesDashboardPaneTitle a:link    {color:#ffffff;text-decoration:underline;}
+.cuesDashboardPaneTitle a:visited {color:#ffffff;text-decoration:underline;}
+.cuesDashboardPaneDND             {cursor:move;}
+.cuesDashboardPaneStatus          {color:#000000;font-weight:normal;font-family:Arial;font-size:11px;line-height:19px;height:19px;position:relative;overflow:hidden;}
+.cuesDashboardPaneCriticalStatus  {color:#e9102a;border:1px solid #e9102a;}
+.cuesDashboardPaneStatusLabel     {color:#000000;font-weight:normal;}
+.cuesDashboardPaneStatus div      {margin-left:8px;margin-right:5px;font-weight:bold;}
+.cuesDashboardPaneStatus div      {margin-left:8px;margin-right:5px;font-weight:bold;}
+.cuesDashboardPaneStatusRTL       {color:#000000;font-weight:normal;font-family:Arial;font-size:11px;line-height:19px;height:19px;position:relative;overflow:hidden;}
+.cuesDashboardPaneStatusRTL div   {margin-right:8px;margin-left:5px;}
+.cuesDashboardPaneContent         {background-color:white;position:relative;z-index:0;width:100%;}
+.cuesDashboardPaneContentLayer    {background-color:transparent;background-image:url(../cues_images/DashboardPaneContentLayer.png);}
+#cuesDashboardPaneMover           {position:absolute;cursor:move;background-color:#c5ccdf;display:none;border:1px solid black;z-index:99;top:-1000px;left:-1000px;}
+.cuesDashboardPaneShadow          {height:4px;font-size:1px;background-repeat:repeat-x;background-image:url('../cues_images/drop-shadow-bot.gif');width:100%;}
+.cuesDashboardPaneNormalStatusLayer   {z-index:-2;position:absolute;top:0;left:-10;width:200%;height:100px;background-color:#ffffff;opacity:.40;filter:alpha(opacity=40);}
+.cuesDashboardPaneCriticalStatusLayer {z-index:-2;position:absolute;top:0;left:-10;width:200%;height:100px;background-color:#f6dee2;}
+.cuesDashboardEditPanel           {display:none;border-bottom:1px solid #c0c0c0;padding-left:4px;padding-right:4px;}
+.cuesDashboardEditPanelCloseLink          {font-size:12px;font-family:Arial;text-decoration:none;}
+.cuesDashboardEditPanelCloseLink:link     {color:#0088c2;text-decoration:none;}
+.cuesDashboardEditPanelCloseLink:visited  {color:#0088c2;text-decoration:none;}
+.cuesDashboardEditPanelCloseLink:hover    {color:#0088c2;text-decoration:underline;}
+.cuesDashboardEditPanelCloseLink:active   {color:#0088c2;text-decoration:none;}
+
+
+/* Datepicker */
+#cuesDatePicker            {position:absolute;background-color:#2D4754;padding-bottom:1px;z-index:999;}
+#cuesDatePickerInner       {border:1px solid #68e5fb;padding:0px;background-color:#ffffff;}
+.cuesDatePickerHeader      {background-color:#a2b9c9;height:29px;*height:auto;*padding:2px 0;}
+.cuesCalPrior              {color:#8499a2;font-family:arial;font-size:12px;text-align:center;}
+.cuesCalCurrent            {color:#000000;font-family:arial;font-size:12px;text-align:center;}
+.cuesCalFuture             {color:#8499a2;font-family:arial;font-size:12px;text-align:center;}
+.cuesCalToday              {border:1px solid #0088c2;}
+.cuesCalSelected           {background-color:#8DB71F;color:#ffffff}
+.cuesCalFocused            {background-color:#8DB71F;color:#ffffff}
+.cuesCalSpecial            {font-weight:bold;}
+.cuesCalBlocked            {color:#8499A2;background-color:#d9e3e9;cursor:default;}
+.cuesCalDisabled           {color:#858a91;background-color:#d9e3e9;cursor:default;}
+.cuesCalWeekdays           {color:#000000;font-family:Arial;font-size:12px;font-weight:bold;}
+.cuesCalTodayLinkDisabled  {color:#858a91;font-family:Arial;text-decoration:none;}
+.cuesCalTodayLink          {color:#000000;font-family:Arial;text-decoration:none;}
+.cuesCalTodayLink:link     {color:#000000;text-decoration:none;}
+.cuesCalTodayLink:visited  {color:#000000;text-decoration:none;}
+.cuesCalTodayLink:hover    {color:#c0d5d5;text-decoration:none;}
+.cuesCalTodayLink:active   {color:#000000;text-decoration:none;}
+#cuesDatePickerLegendSpecial {display:none;font-weight:bold;}
+#cuesDatePickerLegendBlocked {display:none;background-color:#d9e3e9;}
+#cuesDatePickerLegendBlocked div {display:inline;border:1px solid white;color:#8499A2;}
+.cuesDatePickerLegend      {font-weight:normal;background-color:#d9e3e9;padding-left:10px;height:32px;*height:auto;*padding:3px 0 8px 10px;}
+#cuesDatePickerCal         {color:#ff0000;margin:0 10px;}
+a.cuesDatePickerSelector:link {display:block;text-decoration:none;}
+#cuesDatePickerCal td, .cuesCalWeekdays {width:14px;height:11px;line-height:9px;text-align:right;border:3px solid transparent;*border:none;*width:20px;*height:17px;}
+.cuesCalWeekdays           {width:16px;}
+#cuesDatePickerWeekdays    {margin:10px 10px 5px;*padding-left:2px;}
+
+/* Drawer - Navigation Area */
+.cuesDrawersLayer                     {z-index:-1;position:absolute;top:0px;left:0px;height:100%;opacity:.40;filter:alpha(opacity=40);background-color:white;overflow:hidden;padding:0;}
+.cuesDrawersContainer                 {z-index:0;position:relative;overflow:hidden;padding:0;}
+.cuesDrawer                           {position:relative;width:auto;z-index:0;top:0px;left:0px;overflow:hidden;font-family:Arial;font-size:12px;color:#000000;padding:0;cursor:pointer;vertical-align:middle;border-bottom:1px solid #858A91;height:25px;}
+.IESmallestText cuesDrawer {font-size:9px;}
+.IESmallerText  cuesDrawer {font-size:10px;}
+.IENormalText   cuesDrawer {font-size:12px;}
+.IELargerText   cuesDrawer {font-size:14px;}
+.IELargestText  cuesDrawer {font-size:16px;}
+.cuesDrawerContent                    {border-left:1px solid #858A91;}
+.cuesDrawerIcon                       {margin:0 6px 0 0;vertical-align:middle}
+.cuesDrawerIconNoChild                {margin:5px 6px 6px 21px;vertical-align:middle}
+.cuesSelectedDrawerItem               {background-color:#92c212;font-family:Arial;padding:3px;color:#ffffff;}
+.cuesNormalDrawerItem                 {background-color:transparent;font-family:Arial;padding:0px;}
+.cuesNormalTreeDrawerItem             {background-color:transparent;font-family:Arial;font-size:12px;padding:0px;}
+.IESmallestText cuesNormalTreeDrawerItem {font-size:9px;}
+.IESmallerText  cuesNormalTreeDrawerItem {font-size:10px;}
+.IENormalText   cuesNormalTreeDrawerItem {font-size:12px;}
+.IELargerText   cuesNormalTreeDrawerItem {font-size:14px;}
+.IELargestText  cuesNormalTreeDrawerItem {font-size:16px;}
+.cuesSelectedTreeDrawerItem           {background-color:#92c212;font-family:Arial;font-size:12px;padding:0px;color:#ffffff;}
+.IESmallestText cuesSelectedTreeDrawerItem {font-size:9px;}
+.IESmallerText  cuesSelectedTreeDrawerItem {font-size:10px;}
+.IENormalText   cuesSelectedTreeDrawerItem {font-size:12px;}
+.IELargerText   cuesSelectedTreeDrawerItem {font-size:14px;}
+.IELargestText  cuesSelectedTreeDrawerItem {font-size:16px;}
+.cuesDrawerLink                       {}
+a.cuesDrawerLink:link                 {color:#000000;text-decoration:none;font-family:Arial;font-size:12px;line-height:25px;}
+.IESmallestText a.cuesDrawerLink:link {font-size:9px;}
+.IESmallerText  a.cuesDrawerLink:link {font-size:10px;}
+.IENormalText   a.cuesDrawerLink:link {font-size:12px;}
+.IELargerText   a.cuesDrawerLink:link {font-size:14px;}
+.IELargestText  a.cuesDrawerLink:link {font-size:16px;}
+a.cuesDrawerLink:visited              {color:#000000;text-decoration:none;font-family:Arial;font-size:12px;line-height:25px;}
+.IESmallestText a.cuesDrawerLink:visited {font-size:9px;}
+.IESmallerText  a.cuesDrawerLink:visited {font-size:10px;}
+.IENormalText   a.cuesDrawerLink:visited {font-size:12px;}
+.IELargerText   a.cuesDrawerLink:visited {font-size:14px;}
+.IELargestText  a.cuesDrawerLink:visited {font-size:16px;}
+a.cuesDrawerLink:hover                {color:#000000;text-decoration:none;font-family:Arial;font-size:12px;line-height:25px;}
+.IESmallestText a.cuesDrawerLink:hover {font-size:9px;}
+.IESmallerText  a.cuesDrawerLink:hover {font-size:10px;}
+.IENormalText   a.cuesDrawerLink:hover {font-size:12px;}
+.IELargerText   a.cuesDrawerLink:hover {font-size:14px;}
+.IELargestText  a.cuesDrawerLink:hover {font-size:16px;}
+a.cuesDrawerLink:active               {color:#000000;text-decoration:none;font-family:Arial;font-size:12px;line-height:25px;}
+.IESmallestText a.cuesDrawerLink:active {font-size:9px;}
+.IESmallerText  a.cuesDrawerLink:active {font-size:10px;}
+.IENormalText   a.cuesDrawerLink:active {font-size:12px;}
+.IELargerText   a.cuesDrawerLink:active {font-size:14px;}
+.IELargestText  a.cuesDrawerLink:active {font-size:16px;}
+.cuesDrawerCaptionActive a            {color:#ffffff;font-weight:bold;line-height:25px;}
+.cuesDrawerCaptionActive a:link       {color:#ffffff;font-weight:bold;line-height:25px;}
+.cuesDrawerCaptionActive a:active     {color:#ffffff;font-weight:bold;line-height:25px;}
+.cuesDrawerCaptionActive a:visited    {color:#ffffff;font-weight:bold;line-height:25px;}
+.cuesDrawerCaptionActive a:hover      {color:#ffffff;font-weight:bold;line-height:25px;}
+a.cuesDrawerItemLink:link             {color:#000000;text-decoration:none;font-family:Arial;font-size:12px;margin-left:2px;margin-right:0px;} 
+.IESmallestText a.cuesDrawerItemLink:link {font-size:9px;}
+.IESmallerText  a.cuesDrawerItemLink:link {font-size:10px;}
+.IENormalText   a.cuesDrawerItemLink:link {font-size:12px;}
+.IELargerText   a.cuesDrawerItemLink:link {font-size:14px;}
+.IELargestText  a.cuesDrawerItemLink:link {font-size:16px;}
+a.cuesDrawerItemLink:visited          {color:#000000;;text-decoration:none;font-family:Arial;font-size:12px;margin-left:2px;margin-right:0px;}
+.IESmallestText a.cuesDrawerItemLink:visited {font-size:9px;}
+.IESmallerText  a.cuesDrawerItemLink:visited {font-size:10px;}
+.IENormalText   a.cuesDrawerItemLink:visited {font-size:12px;}
+.IELargerText   a.cuesDrawerItemLink:visited {font-size:14px;}
+.IELargestText  a.cuesDrawerItemLink:visited {font-size:16px;}
+a.cuesDrawerItemLink:hover            {color:#1fa0d5;;text-decoration:none;font-family:Arial;font-size:12px;margin-left:2px;margin-right:0px;}
+.IESmallestText a.cuesDrawerItemLink:hover {font-size:9px;}
+.IESmallerText  a.cuesDrawerItemLink:hover {font-size:10px;}
+.IENormalText   a.cuesDrawerItemLink:hover {font-size:12px;}
+.IELargerText   a.cuesDrawerItemLink:hover {font-size:14px;}
+.IELargestText  a.cuesDrawerItemLink:hover {font-size:16px;}
+a.cuesDrawerItemLink:active           {color:#000000;;text-decoration:none;font-family:Arial;font-size:12px;margin-left:2px;margin-right:0px;} 
+.IESmallestText a.cuesDrawerItemLink:active {font-size:9px;}
+.IESmallerText  a.cuesDrawerItemLink:active {font-size:10px;}
+.IENormalText   a.cuesDrawerItemLink:active {font-size:12px;}
+.IELargerText   a.cuesDrawerItemLink:active {font-size:14px;}
+.IELargestText  a.cuesDrawerItemLink:active {font-size:16px;}
+.cuesSelectedTreeDrawerItem a         {color:#ffffff;margin-left:2px;margin-right:0px;}
+.cuesSelectedTreeDrawerItem a:link    {color:#ffffff;margin-left:2px;margin-right:0px;}
+.cuesSelectedTreeDrawerItem a:active  {color:#ffffff;margin-left:2px;margin-right:0px;}
+.cuesSelectedTreeDrawerItem a:visited {color:#ffffff;margin-left:2px;margin-right:0px;}
+.cuesSelectedTreeDrawerItem a:hover   {color:#ffffff;margin-left:2px;margin-right:0px;}
+.cuesDrawerScrollerDown               {border-bottom:1px solid #858A91;border-left:1px solid #858A91;opacity:.60;filter:alpha(opacity=60);background-color:white;}
+.cuesDrawerScrollerUp                 {border-top:1px solid #858A91;border-left:1px solid #858A91;opacity:.60;filter:alpha(opacity=60);background-color:white;}
+.cuesDrawerToggler                    {margin-left:4px;margin-right:4px;line-height:25px;vertical-align:middle;}
+.cuesDrawerToggler img                {vertical-align:text-bottom;}
+.cuesDrawerNonToggler                 {width:16px;vertical-align:middle;}
+.cuesDrawerVerticalAlign              {display:inline-block;height:100%;}
+
+/* Form Controls */
+form                           {display:inline;}
+input, select, optgroup, option, textarea, button {font-family:Arial;font-size:12px;}
+.cuesCheckbox                  {vertical-align:middle;}
+.invisibleLabel                {display:none;}
+.cuesErroredControl            {background-color: #FFFFCC;}
+.cuesErrorBox                  {border:1px solid #CC0000; padding:8px; margin:8px; color:#CC0000;}
+.cuesErrorText                 {color:#e9102a;background-image:url(../cues_images/ContextMessageArrow_DownT.gif);background-repeat:no-repeat;background-position:0 100%;padding-bottom:16px;margin-bottom:3px;font-size:11px;font-weight:bold;}
+.cuesErrorTextInline           {color:#e9102a;display:inline;background-image:url(../cues_images/ContextMessageArrow_LeftT.gif);background-repeat:no-repeat;background-position:3px 0px;vertical-align:top;padding-left:18px;font-size:11px;font-weight:bold;}
+.cuesErrorTextInlineFloatRight {color:#e9102a;float:right;display:inline;background-image:url(../cues_images/ContextMessageArrow_LeftT.gif);background-repeat:no-repeat;background-position:3px 0px;vertical-align:top;padding-left:18px;font-size:11px;font-weight:bold;}
+.cuesErrorTextInlineFloatLeft  {color:#e9102a;float:left;display:inline;background-image:url(../cues_images/ContextMessageArrow_LeftT.gif);background-repeat:no-repeat;background-position:3px 0px;vertical-align:top;padding-left:18px;font-size:11px;font-weight:bold;}
+.cuesDisabledField             {background-color:#dfdfdf;}
+.cuesFormPane                  {border:1px solid #8499a2;position:relative;}
+.cuesFormPaneIE                {height:1%;}
+.cuesFormPaneContainer         {margin-bottom:10px;padding:10px;}
+.cuesFormPaneLayer             {z-index:-1;position:absolute;top:0px;left:0px;height:100%;width:100%;opacity:.67;filter:alpha(opacity=67);background-color:white;overflow:hidden;padding:0;}
+.cuesRequiredFieldsNotice      {color:#e74201;}
+.cuesRequiredField             {display:inline;padding-right:3px;width:13px;}
+.cuesRequiredField img         {vertical-align:top;margin-top:2px;}
+.cuesRequiredField span        {padding-right:10px;}
+
+/* GettingStarted */
+.cuesGettingStartedContainer             {margin:0px;text-align:left;position:relative;}
+.cuesGettingStartedLayer                 {z-index:-1;position:absolute;top:0px;left:0px;height:1800px;width:100%;opacity:.40;filter:alpha(opacity=40);background-color:white;overflow:hidden;padding:0;}
+.cuesGettingStartedCaption               {padding-left:11px;background-color:#53636a;height:49px;}
+.cuesGettingStartedCaption span          {color:#ffffff;font-size:18px;font-family:arial;font-weight:normal;line-height:49px;vertical-align:middle;}
+.cuesGettingStartedHeader                {padding-top:12px;padding-bottom:18px;padding-left:10px;}
+.cuesGettingStartedHeaderText            {display:block;color:#000000;font-size:12px;font-family:arial;font-weight:normal;}
+.cuesGettingStartedBody                  {}
+.cuesGettingStartedBody table            {width:100%;margin-left:8px;padding-right:10px;}
+.cuesGettingStartedSection               {margin-bottom:24px;}
+.cuesGettingStartedSectionLast           {margin-bottom:0px;}
+.cuesGettingStartedSectionTitle          {color:#444444;font-size:15px;font-family:arial;font-weight:normal;}
+.IESmallestText .cuesGettingStartedSectionTitle {font-size:11px;}
+.IESmallerText  .cuesGettingStartedSectionTitle {font-size:12px;}
+.IENormalText   .cuesGettingStartedSectionTitle {font-size:15px;}
+.IELargerText   .cuesGettingStartedSectionTitle {font-size:17px;}
+.IELargestText  .cuesGettingStartedSectionTitle {font-size:20px;}
+.cuesGettingStartedSectionTitle span     {margin-left:12px;}
+.cuesGettingStartedSectionItem           {margin-left:37px;font-size:12px;font-family:arial;}
+.cuesGettingStartedSectionItem a         {color:#0088c2;}
+.cuesGettingStartedSectionItem a:link    {text-decoration:none;color:#0088c2;}
+.cuesGettingStartedSectionItem a:hover   {text-decoration:underline;color:#0088c2;}
+.cuesGettingStartedSectionItem a:active  {text-decoration:none;color:#0088c2;}
+.cuesGettingStartedSectionItem a:visited {text-decoration:none;color:#0088c2;}
+.cuesGettingStartedSectionDivider        {width:13px;padding:0;background-image:url(../cues_images/sectiondivider.gif);background-repeat:repeat-y;}
+.cuesGettingStartedFooter                {margin-top:20px;margin-left:10px;margin-right:10px;background-image:url(../cues_images/ToolbarContent.png);}
+.cuesGettingStartedFooter span           {margin-left:13px;color:#000000;font-size:12px;font-family:arial;font-weight:normal;line-height:39px;}
+.cuesGettingStartedFooterItem a          {color:#0088c2;font-size:12px;font-family:arial;font-weight:normal;}
+.cuesGettingStartedFooterItem a:link     {text-decoration:none;color:#0088c2;}
+.cuesGettingStartedFooterItem a:hover    {text-decoration:underline;color:#0088c2;}
+.cuesGettingStartedFooterItem a:active   {text-decoration:none;color:#0088c2;}
+.cuesGettingStartedFooterItem a:visited  {text-decoration:none;color:#0088c2;}
+a.cuesGettingStartedFooterItem           {color:#0088c2;font-size:12px;font-family:arial;font-weight:normal;}
+a.cuesGettingStartedFooterItem:link      {text-decoration:none;color:#0088c2;}
+a.cuesGettingStartedFooterItem:hover     {text-decoration:underline;color:#0088c2;}
+a.cuesGettingStartedFooterItem:active    {text-decoration:none;color:#0088c2;}
+a.cuesGettingStartedFooterItem:visited   {text-decoration:none;color:#0088c2;}
+.cuesGettingStartedConfigure             {padding-top:10px;}
+.cuesGettingStartedConfigure span        {margin-left:18px;color:#000000;font-size:12px;font-family:arial;font-weight:normal;}
+
+/* Group Box */
+.cuesGroupBox         {padding:0;border:0px;}
+.cuesGroupBoxIndented {padding:2px 4px 2px 4px;border:0px;}
+.cuesGroupBox1OnRow   {margin:8px 8px 0 8px}
+.cuesGroupBoxTitle    {font-family:Arial;font-size:12px;color:#000000;font-weight:bold;}
+
+/* HideShow */
+a.cuesHideShow:link    {color:#000000;text-decoration:none;} 
+a.cuesHideShow:visited {color:#000000;text-decoration:none;}
+a.cuesHideShow:hover   {color:#000000;text-decoration:none;}
+a.cuesHideShow:active  {color:#000000;text-decoration:none;} 
+button.cuesHideShow    {background-color:transparent;height:20px;border:0px;}
+.cuesHideShowIcon      {margin:-3px 0 0 0;vertical-align:middle;}
+
+/* Layout */
+#cuesLayoutTogglerArea {}
+.cuesLayoutNavArea     {border-width:0px;border-color:#858A91;border-style:solid;border-right:1px solid #858A91;}
+.cuesLayoutNavContainer {z-index:0;position:relative;height:100%;width:100%;overflow:hidden;padding:0;}
+.cuesLayoutNavLayer    {z-index:-1;position:absolute;top:0px;left:0px;height:100%;width:100%;opacity:.67;filter:alpha(opacity=67);background-color:white;overflow:hidden;padding:0;}
+.cuesLayoutNavAreaTree {background-color:blue;border-width:1px;border-color:#858A91;border-style:solid;}
+#cuesLayoutContentArea {width:100%;border-width:0px;border-color:#858A91;border-style:solid;}
+#cuesLayoutLeftBorder  {width:15px;}
+#cuesLayoutRightBorder {width:15px;}
+.cuesContentLayer      {z-index:-1;position:absolute;top:0px;left:0px;height:1800px;width:2000px;opacity:.67;filter:alpha(opacity=67);background-color:white;overflow:hidden;padding:0;}
+#cuesContentArea       {z-index:1;}
+.cuesLayoutCopyright   {padding-left:15px;line-height:36px;font-family:arial;color:#ffffff;font-weight:normal;}
+#cuesResizeLayer       {z-index:999;position:absolute;top:0;left:0;height:2048px;width:2048px;display:none;opacity:.40;filter:alpha(opacity=40);background-color:white;overflow:hidden;}
+#cuesResizeBox         {position:absolute;top:0;left:0;width:20px;border:1px dashed black;background-color:#6b7485;}
+#cuesNavGripper        {margin-left:1px;}
+.cuesLayoutContentLayer  {z-index:-1;position:absolute;top:0px;left:0px;height:100%;width:100%;opacity:.67;filter:alpha(opacity=67);background-color:white;overflow:hidden;padding:0;}
+#cuesLayoutTaskPanelContainer {position:relative;height:100%;margin:0;padding:0;zoom:1;}
+.cuesLayoutTaskPanelLayer     {z-index:-1;position:absolute;top:0px;left:0px;height:100%;width:100%;opacity:.83;filter:alpha(opacity=83);background-color:white;overflow:hidden;padding:0;}
+/* Login Area */
+.cuesLoginContainer            {height:100%;width:100%;}
+.cuesLoginProductSection       {margin-top:0px;margin-left:0px;margin-right:20px;position:relative;float:left;}
+.cuesLoginFieldsSection        {margin-top:0px;margin-left:20px;margin-right:0px;position:relative;float:right;}
+.cuesLoginProductSectionRTL    {margin-top:0px;margin-left:20px;margin-right:0px;position:relative;float:right;}
+.cuesLoginFieldsSectionRTL     {margin-top:0px;margin-left:0px;margin-right:20px;position:relative;float:left;}
+.cuesLoginInfoSection          {margin-left:0px;margin-right:0px;margin-bottom:20px;position:relative;}
+.cuesLoginClear                {clear:both;line-height:1px;}
+.cuesLoginCopyright            {font-family:Arial;color:#ffffff;}
+.cuesLoginCopyright a          {color:white;}
+.cuesLoginVersionInfo          {font-family:Arial;color:#ffffff;font-size:11px;font-weight:bold;}
+.IESmallestText .cuesLoginVersionInfo {font-size:8px;}
+.IESmallerText  .cuesLoginVersionInfo {font-size:9px;}
+.IENormalText   .cuesLoginVersionInfo {font-size:11px;}
+.IELargerText   .cuesLoginVersionInfo {font-size:13px;}
+.IELargestText  .cuesLoginVersionInfo {font-size:14px;}
+.cuesLoginProductName          {font-family:Arial;color:#ffffff;font-size:21px;font-weight:normal;}
+.IESmallestText .cuesLoginProductName {font-size:16px;}
+.IESmallerText  .cuesLoginProductName {font-size:18px;}
+.IENormalText   .cuesLoginProductName {font-size:21px;}
+.IELargerText   .cuesLoginProductName {font-size:24px;}
+.IELargestText  .cuesLoginProductName {font-size:27px;}
+.cuesLoginProductFamily        {font-family:Arial;color:#ffffff;font-size:14px;font-weight:normal;}
+.IESmallestText .cuesLoginProductFamily {font-size:10px;}
+.IESmallerText  .cuesLoginProductFamily {font-size:12px;}
+.IENormalText   .cuesLoginProductFamily {font-size:14px;}
+.IELargerText   .cuesLoginProductFamily {font-size:16px;}
+.IELargestText  .cuesLoginProductFamily {font-size:18px;}
+.cuesLoginProductSubtitle      {font-family:Arial;color:#ffffff;font-size:14px;font-weight:normal;}
+.IESmallestText .cuesLoginProductSubtitle {font-size:10px;}
+.IESmallerText  .cuesLoginProductSubtitle {font-size:12px;}
+.IENormalText   .cuesLoginProductSubtitle {font-size:14px;}
+.IELargerText   .cuesLoginProductSubtitle {font-size:16px;}
+.IELargestText  .cuesLoginProductSubtitle {font-size:18px;}
+.cuesLoginButton               {font-family:Arial;border-top:1px solid #acc2cd;border-left:1px solid #acc2cd;border-right:1px solid #1f4355;border-bottom:1px solid #1f4355;}
+.cuesLoginField                {font-family:Arial;color:#ffffff;font-size:12px;font-weight:normal;}
+.IESmallestText .cuesLoginField {font-size:9px;}
+.IESmallerText  .cuesLoginField {font-size:10px;}
+.IENormalText   .cuesLoginField {font-size:12px;}
+.IELargerText   .cuesLoginField {font-size:14px;}
+.IELargestText  .cuesLoginField {font-size:16px;}
+a.cuesLoginLink:link           {font-family:Arial;color:#ffffff;}
+a.cuesLoginLink:visited        {font-family:Arial;color:#ffffff;}
+a.cuesLoginLink:hover          {font-family:Arial;color:#ffffff;}
+a.cuesLoginLink:active         {font-family:Arial;color:#ffffff;}
+a.cuesLoginProblemLink:link    {text-decoration:none;font-family:Arial;font-size:11px;color:#0088c2;}
+.IESmallestText a.cuesLoginProblemLink:link {font-size:8px;}
+.IESmallerText  a.cuesLoginProblemLink:link {font-size:9px;}
+.IENormalText   a.cuesLoginProblemLink:link {font-size:11px;}
+.IELargerText   a.cuesLoginProblemLink:link {font-size:13px;}
+.IELargestText  a.cuesLoginProblemLink:link {font-size:14px;}
+a.cuesLoginProblemLink:visited {text-decoration:none;font-family:Arial;font-size:11px;color:#0088c2;}
+.IESmallestText a.cuesLoginProblemLink:visited {font-size:8px;}
+.IESmallerText  a.cuesLoginProblemLink:visited {font-size:9px;}
+.IENormalText   a.cuesLoginProblemLink:visited {font-size:11px;}
+.IELargerText   a.cuesLoginProblemLink:visited {font-size:13px;}
+.IELargestText  a.cuesLoginProblemLink:visited {font-size:14px;}
+a.cuesLoginProblemLink:hover   {text-decoration:underline;font-family:Arial;font-size:11px;color:#0088c2;}
+.IESmallestText a.cuesLoginProblemLink:hover {font-size:8px;}
+.IESmallerText  a.cuesLoginProblemLink:hover {font-size:9px;}
+.IENormalText   a.cuesLoginProblemLink:hover {font-size:11px;}
+.IELargerText   a.cuesLoginProblemLink:hover {font-size:13px;}
+.IELargestText  a.cuesLoginProblemLink:hover {font-size:14px;}
+a.cuesLoginProblemLink:active  {text-decoration:none;font-family:Arial;font-size:11px;color:#0088c2;}
+.IESmallestText a.cuesLoginProblemLink:active {font-size:8px;}
+.IESmallerText  a.cuesLoginProblemLink:active {font-size:9px;}
+.IENormalText   a.cuesLoginProblemLink:active {font-size:11px;}
+.IELargerText   a.cuesLoginProblemLink:active {font-size:13px;}
+.IELargestText  a.cuesLoginProblemLink:active {font-size:14px;}
+.cuesLoginLogo                  {margin-right:20px;}
+.cuesLoginStatus                {position:absolute;padding:7px;}
+.cuesLoginStatus .cuesStatusBox {padding:0px;}
+.cuesLoginErrorBox              {padding:5px;position:relative;zoom:1;}
+.cuesLoginErrorTextIE           {margin-bottom:-4px;padding-bottom:14px;}
+.cuesLoginErrorTextFF           {margin-bottom:-3px;padding-bottom:13px;}
+
+/* MCLB - multi-column listbox */
+.cuesMCLBHeader              {border-left:1px solid #8499a2;border-right:1px solid #8499a2;border-top:1px solid #8499a2;}
+.cuesMCLBHeader td           {background-color:#d9e3e9;border-left:1px solid #dbdbdb;border-right:1px solid #ffffff;font-family:Arial;font-size:12px;font-weight:normal;padding-left:4px;padding-right:4px;}
+.IESmallestText .cuesMCLBHeader td {font-size:9px;}
+.IESmallerText  .cuesMCLBHeader td {font-size:10px;}
+.IENormalText   .cuesMCLBHeader td {font-size:12px;}
+.IELargerText   .cuesMCLBHeader td {font-size:14px;}
+.IELargestText  .cuesMCLBHeader td {font-size:16px;}
+.cuesMCLBContent             {border:1px solid #8499a2;position:relative;overflow:auto;height:60px;}
+
+/* Menu Area*/
+.udm a {font-family:Arial;font-size:12px;text-decoration:none;}
+#udm a {font-family:Arial;font-size:12px; text-decoration:none;}
+.udmsubmenu {font-family:Arial;font-size:12px;}
+#udmsubmenu {font-family:Arial;font-size:12px;}
+.udmsubmenu ul.udmsubmenu a {font-family:Arial;font-size:11px;text-decoration:none;}
+#udmsubmenu ul.udmsubmenu a {font-family:Arial;font-size:11px;text-decoration:none;}
+
+/* Messages */
+.cuesLoadingBox          {z-index:999;width:300px;height:73px;position:absolute;border:0px;background-color:#a2b9c9;}
+.cuesLoadingBody         {padding:8 0 8 0;background-color:#a2b9c9;}
+.cuesLoadingLayer        {z-index:-1;position:absolute;top:0px;left:0px;padding:0px;height:1600px;width:2000px;opacity:.50;filter:alpha(opacity=50);background-color:#000000;overflow:hidden;}
+.cuesLoadingMessage      {font-family:Arial;font-size:12px;color:#000000;position:relative;top:12px;}
+.cuesDynamicMessageBox   {z-index:999;width:275px;height:73px;position:absolute;padding:18 10 10 10;background-color:#a2b9c9;font-family:Arial;font-size:12px;color:#000000;border:0;}
+.cuesDynamicMessageLayer {z-index:999;position:absolute;top:0;left:0;height:100%;width:100%;opacity:.50;filter:alpha(opacity=50);background-color:#000000;overflow:hidden;}
+
+/* PageHeader */
+.cuesHeaderBg                {width:100%;background-image:url('../cues_images/headerBgGradient.gif'); }
+.cuesHeaderBgLTR             {width:100%;background-image:url('../cues_images/headerBgGradient.gif'); }
+.cuesHeaderBgRTL             {width:100%;background-position:right;background-image:url('../cues_images/headerBgGradientRTL.gif'); }
+.cuesHeaderAccent            {background:#003333;height:8px;} 
+.cuesHeaderTitleLogo         {font-weight:normal;font-size:22px;color:#ffffff;vertical-align:bottom;}
+.IESmallestText .cuesHeaderTitleLogo {font-size:16px;}
+.IESmallerText  .cuesHeaderTitleLogo {font-size:18px;}
+.IENormalText   .cuesHeaderTitleLogo {font-size:22px;}
+.IELargerText   .cuesHeaderTitleLogo {font-size:26px;}
+.IELargestText  .cuesHeaderTitleLogo {font-size:29px;}
+.cuesHeaderTitleNoLogo       {font-weight:normal;font-size:22px;color:#ffffff;padding:0 12px;}
+.IESmallestText .cuesHeaderTitleNoLogo {font-size:16px;}
+.IESmallerText  .cuesHeaderTitleNoLogo {font-size:18px;}
+.IENormalText   .cuesHeaderTitleNoLogo {font-size:22px;}
+.IELargerText   .cuesHeaderTitleNoLogo {font-size:26px;}
+.IELargestText  .cuesHeaderTitleNoLogo {font-size:29px;}
+.cuesHeaderSubtitle          {font-weight:normal;font-size:14px;color:#ffffff;}
+.IESmallestText .cuesHeaderSubtitle {font-size:10px;}
+.IESmallerText  .cuesHeaderSubtitle {font-size:12px;}
+.IENormalText   .cuesHeaderSubtitle {font-size:14px;}
+.IELargerText   .cuesHeaderSubtitle {font-size:16px;}
+.IELargestText  .cuesHeaderSubtitle {font-size:18px;}
+.cuesHeaderText              {color:#ffffff;margin-left:8px;margin-right:8px;}
+.cuesHeaderTextBold          {color:#ffffff;font-weight:bold;margin-left:8px;margin-right:8px;}
+a.cuesHeaderLink             {margin-left:7px;margin-right:7px;}
+a.cuesHeaderLink:link        {color:#ffffff;text-decoration:none;}
+a.cuesHeaderLink:visited     {color:#ffffff;text-decoration:none;}
+a.cuesHeaderLink:hover       {color:#ffffff;text-decoration:underline;}
+a.cuesHeaderLink:active      {color:#ffffff;text-decoration:none;} 
+a.cuesHeaderLinkBold         {margin-left:7px;margin-right:7px;}
+a.cuesHeaderLinkBold:link    {color:#ffffff;text-decoration:none;font-weight:bold;} 
+a.cuesHeaderLinkBold:visited {color:#ffffff;text-decoration:none;font-weight:bold;}
+a.cuesHeaderLinkBold:hover   {color:#ffffff;text-decoration:underline;font-weight:bold;}
+a.cuesHeaderLinkBold:active  {color:#ffffff;text-decoration:none;font-weight:bold;} 
+.cuesHeaderNavArea           {padding-left:4px;color:#ffffff;}
+.cuesHeaderTextArea          {padding-left:4px;vertical-align:top;font-size:11px;}
+.IESmallestText .cuesHeaderTextArea {font-size:8px;}
+.IESmallerText  .cuesHeaderTextArea {font-size:9px;}
+.IENormalText   .cuesHeaderTextArea {font-size:11px;}
+.IELargerText   .cuesHeaderTextArea {font-size:13px;}
+.IELargestText  .cuesHeaderTextArea {font-size:14px;}
+.cuesHeaderDivider           {color:#ffffff;padding:0 12px;}
+#cuesHeaderLogoImage         {margin-left:15px;}
+.cuesHeaderTable             {margin-right:10px;margin-top:15px;margin-bottom:10px;}
+
+/* Pagination */
+.cuesPagination           {font-size:12px;font-family:Arial;font-weight:normal;}
+.cuesPaginationbutton     {font-size:2pt;margin-left:4px;margin-right:4px;padding:0px;}
+.enabledPageLink          {font-weight:normal;color:#1fa0d5;padding-left:5px;padding-right:5px;}
+a.enabledPageLink:link    {text-decoration:none;color:#1fa0d5;}
+a.enabledPageLink:visited {text-decoration:none;color:#1fa0d5;}
+a.enabledPageLink:active  {text-decoration:none;color:#1fa0d5;}
+a.enabledPageLink:hover   {text-decoration:underline;color:#1fa0d5;}
+.disabledPageLink         {font-weight:normal;color:#858994;margin-left:4px;margin-right:4px;}
+.activePage               {font-weight:bold;color:#000000;margin-left:4px;margin-right:4px;}
+
+/* Pane */
+.cuesPaneTitle         {font-family:Arial;font-size:12px;font-weight:bold;color:#000000;padding:2px 8px;line-height:16px;vertical-align:middle;}
+.cuesPaneTitleBg       {background-color:#c5ccdf;border:1px solid #858A91;}
+.cuesPaneContainer     {overflow:auto;border-top:1px solid #858A91;border-bottom:1px solid #858A91;background-color:white;}
+
+/* Primary Tabs */
+#cuesPrimaryTabset                       {padding:0px;margin:0px;position:relative;z-index:1;}
+#cuesPrimaryTabset table                 {margin-left:4px;margin-right:4px;margin-bottom:2px;#margin-bottom:3px;padding:0;border-collapse:collapse;}
+.cuesPrimaryTab                          {position:relative;z-index:0;margin:5px 4px 5px 4px;padding:0;cursor:pointer;}
+.cuesPrimaryTabCaption                   {padding-left:14px;padding-right:14px;padding-top:4px;padding-bottom:4px;}
+.cuesPrimaryTabCaptionActive             {font-weight:bold;color:#ffffff;}
+.cuesPrimaryTabCaptionActive a:link      {color:#ffffff;} 
+.cuesPrimaryTabCaptionActive a:active    {color:#ffffff;} 
+.cuesPrimaryTabCaptionActive a:visited   {color:#ffffff;} 
+.cuesPrimaryTabCaptionActive a:hover     {color:#ffffff;} 
+.cuesPrimaryTabCaptionInactive           {font-weight:normal;color:#ffffff;}
+.cuesPrimaryTabCaptionInactive a:link    {color:#ffffff;}
+.cuesPrimaryTabCaptionInactive a:visited {color:#ffffff;}
+.cuesPrimaryTabCaptionInactive a:hover   {color:#ffffff;}
+.cuesPrimaryTabCaptionInactive a:active  {color:#ffffff;}
+a.cuesPrimaryTabLink:link                {text-decoration:none;font-family:Arial;font-size:12px;} 
+a.cuesPrimaryTabLink:visited             {text-decoration:none;font-family:Arial;font-size:12px;} 
+a.cuesPrimaryTabLink:hover               {text-decoration:none;font-family:Arial;font-size:12px;} 
+a.cuesPrimaryTabLink:active              {text-decoration:none;font-family:Arial;font-size:12px;} 
+
+/* progress bar */
+.cuesProgressBar            {line-height:15px;border-top:1px solid #d0cfcf;border-left:1px solid #d0cfcf;border-right:1px solid #d0cfcf;border-bottom:1px solid #a3a3a3;position:relative;width:270px;padding:0;overflow:hidden;background-color:#ffffff;}
+.cuesProgressBarDeterminate {height:15px;zoom:1;position:absolute;left:0;top:0;width:0px;background-image:url("../cues_images/ProgressBar_Determinate.jpg");background-repeat:repeat-x;display:none;}
+
+/* Rules */
+.cuesHR {height:1px;color:#8499a2;opacity:.40;filter:alpha(opacity=40);}
+.cuesHRLabel {font-weight:bold;}
+
+/* Scheduler */
+.cuesSchedulerContainer         {border:1px solid #8499A2;}
+.cuesSchedulerButtonRow         {text-align:left;background-color:#d9e3e9;padding-top:3px;padding-bottom:3px;padding-left:10px;}
+.cuesSchedulerRowOdd            {background-color:#f5f9fd;}
+.cuesSchedulerRowEven           {background-color:#ebeff3;}
+.cuesSchedulerTickMark          {border-right:2px solid #a0a0a0;}
+.cuesSchedulerLeftCell          {}
+.cuesSchedulerRowHeaderCell     {text-align:right;font-family:Arial;font-size:12px;color:#000000;background-color:#d9e3e9;border-top:1px solid #808080;padding-right:5px;}
+.cuesSchedulerHeader            {background-color:#d9e3e9;}
+.cuesSchedulerColumnHeaderCell  {text-align:center;font-family:Arial;font-size:12px;color:#000000;border-left:1px solid #808080;}
+.cuesSchedulerLastRow           {border-bottom:1px solid #808080;}
+.cuesSchedulerCell              {border-top:1px solid #c0c0c0;border-right:1px solid #c0c0c0;}
+.cuesSchedulerCell2             {border-top:1px solid #c0c0c0;border-right:2px solid #a0a0a0;}
+.cuesSchedulerByTimeCell        {border-top:1px solid #c0c0c0;border-left:1px solid #c0c0c0;}
+#cuesSchedulerPicked            {background-color:#8db71f;}
+#cuesSchedulerNotPicked         {background-color:none;}
+.cuesSchedulerLegendPicked      {background-color:#8db71f;border:1px solid black;}
+.cuesSchedulerLegendNotPicked   {background-color:white;border:1px solid black;}
+.cuesSchedulerFocus             {border-left:1px solid red;border-right:1px solid red;border-top:1px solid red;border-bottom:1px solid red;}
+
+/* Secondary Tabs */
+.cuesSecondaryTabset                       {border-bottom:4px solid #8db71f;padding:0px;}
+.cuesSecondaryTab                          {position:relative;z-index:0;margin:0px 3px 0px 0px;padding:0;cursor:pointer;}
+.cuesSecondaryTabCaption                   {padding-left:8px;padding-right:8px;padding-top:4px;padding-bottom:4px;}
+.cuesSecondaryTabCaptionActive             {font-weight:bold;color:#ffffff;}
+.cuesSecondaryTabCaptionActive a:link      {color:#ffffff;} 
+.cuesSecondaryTabCaptionActive a:active    {color:#ffffff;} 
+.cuesSecondaryTabCaptionActive a:visited   {color:#ffffff;} 
+.cuesSecondaryTabCaptionActive a:hover     {color:#ffffff;} 
+.cuesSecondaryTabCaptionInactive           {font-weight:normal;color:#ffffff;}
+.cuesSecondaryTabCaptionInactive a:link    {color:#ffffff;}
+.cuesSecondaryTabCaptionInactive a:visited {color:#ffffff;}
+.cuesSecondaryTabCaptionInactive a:hover   {color:#ffffff;}
+.cuesSecondaryTabCaptionInactive a:active  {color:#ffffff;}
+a.cuesSecondaryTabLink:link                {text-decoration:none;font-family:Arial;font-size:12px;} 
+a.cuesSecondaryTabLink:visited             {text-decoration:none;font-family:Arial;font-size:12px;} 
+a.cuesSecondaryTabLink:hover               {text-decoration:none;font-family:Arial;font-size:12px;} 
+a.cuesSecondaryTabLink:active              {text-decoration:none;font-family:Arial;font-size:12px;} 
+
+/* Shadowing */
+.cuesShadowIE        {height:1em;filter:dropShadow(Color=#999999,offX=1,offY=1,positive=true);}
+.cuesShadowFF        {position:relative;display:block;}
+.cuesShadowFF span   {position:absolute;display:block;top:0px;white-space:nowrap;}
+.cuesShadowFF:before {display:block;padding:1px;content:attr(shadowText);color:#999999;} 
+.cuesShadowNative    {text-shadow:2px 2px 2px #999999;}
+
+/* spinner */
+.cuesSpinnerContainer {display:inline;position:relative;white-space:nowrap;zoom:1;}
+
+/* Status Box */
+.cuesStatusBox       {padding-top:15px;padding-bottom:15px;border:0px;}
+.cuesStatusText      {padding-left:8px;font-family:Arial;font-size:14px;color:#000000;}
+.IESmallestText .cuesStatusText {font-size:10px;}
+.IESmallerText  .cuesStatusText {font-size:12px;}
+.IENormalText   .cuesStatusText {font-size:14px;}
+.IELargerText   .cuesStatusText {font-size:16px;}
+.IELargestText  .cuesStatusText {font-size:18px;}
+.cuesStatusBoxError  {padding:0;margin:0;border:0px;}
+.cuesStatusTextError {padding-left:8px;font-family:Arial;font-size:14px;color:#e9102a;}
+.IESmallestText .cuesStatusTextError {font-size:10px;}
+.IESmallerText  .cuesStatusTextError {font-size:12px;}
+.IENormalText   .cuesStatusTextError {font-size:14px;}
+.IELargerText   .cuesStatusTextError {font-size:16px;}
+.IELargestText  .cuesStatusTextError {font-size:18px;}
+
+/* Table */
+.cuesTableTitleBg                   {background-color:#a2b9c9;border:1px solid #8499a2;}
+.cuesTableTitle                     {font-family:Arial;font-size:12px;font-weight:bold;color:#000000;padding:2px 8px;line-height:16px;vertical-align:middle;height:24px;}
+.IESmallestText .cuesTableTitle {font-size:9px;}
+.IESmallerText  .cuesTableTitle {font-size:10px;}
+.IENormalText   .cuesTableTitle {font-size:12px;}
+.IELargerText   .cuesTableTitle {font-size:14px;}
+.IELargestText  .cuesTableTitle {font-size:16px;}
+.cuesTableTitleIcon                 {margin-right:5px;vertical-align:text-bottom;}
+.cuesTableTitleButtonRow            {margin:0;padding:2px 8px;}
+.cuesTableFilterArea                {background-color:#F8F8F8;border-left:1px solid #8499a2;border-right:1px solid #8499a2;border-bottom:1px solid #8499a2;padding:4px 8px 4px 8px;}
+.cuesTableMultiFilterButton         {padding:0px;margin-right:2px;}
+.cuesTableMultiFilterButton img     {vertical-align:text-bottom;}
+.cuesTableBg                        {border-right:1px solid #8499a2; border-bottom:1px solid #8499a2;border-left:1px solid #8499a2;}
+.cuesTableBg th                     {background-color:#d9e3e9;border-left:1px solid #dbdbdb;border-right:1px solid #ffffff;border-bottom:1px solid #8499a2;font-family:Arial;font-size:12px;font-weight:normal;padding:2px 8px;text-align:left;vertical-align:middle;line-height:16px;}
+.IESmallestText .cuesTableBg th {font-size:9px;}
+.IESmallerText  .cuesTableBg th {font-size:10px;}
+.IENormalText   .cuesTableBg th {font-size:12px;}
+.IELargerText   .cuesTableBg th {font-size:14px;}
+.IELargestText  .cuesTableBg th {font-size:16px;}
+.cuesTableScrollableBg              {border-right:1px solid #8499a2;border-bottom:1px solid #8499a2;border-left:1px solid #8499a2;}
+.cuesTableScrollableBg table        {table-layout:fixed;border-right:1px solid #8499a2;}
+.cuesTableScrollableBg th           {background-color:#d9e3e9;border-left:1px solid #dbdbdb;border-right:1px solid #ffffff;font-family:Arial;font-size:12px;font-weight:normal;padding:2px 8px;text-align:left;vertical-align:middle;line-height:16px;}
+.IESmallestText .cuesTableScrollableBg th {font-size:9px;}
+.IESmallerText  .cuesTableScrollableBg th {font-size:10px;}
+.IENormalText   .cuesTableScrollableBg th {font-size:12px;}
+.IELargerText   .cuesTableScrollableBg th {font-size:14px;}
+.IELargestText  .cuesTableScrollableBg th {font-size:16px;}
+.cuesTableScrollableBg td           {padding:2px 8px;vertical-align:middle;line-height:16px;}
+.cuesTableColumnHeaderSorted        {font-weight:bold;}
+.cuesTableOverhang                  {background-color:#d9e3e9;border-right:1px solid #8499a2;}
+.cuesTableOverhangRTL               {background-color:#d9e3e9;border-left:1px solid #8499a2;}
+.cuesTableGroupedBg                 {background-color:#d9e3e9;}
+.cuesTableBg td                     {padding:2px 8px;vertical-align:text-top;line-height:20px;}
+.cuesTableRowOdd                    {background-color:#e5ebf3;}
+.cuesTableRowOdd td                 {border-bottom:1px solid #f8f8f8;border-left:1px solid #e5ebf3;border-right:1px solid #e5ebf3;}
+.cuesTableRowOddSelected            {background:#8db71f url(../cues_images/tableSelectedRowBg.gif) top left repeat-x;}
+.cuesTableRowOddSelected td         {border-bottom:1px solid #f8f8f8;border-left:1px solid transparent;border-right:1px solid transparent;color:#ffffff;}
+* html .cuesTableRowOddSelected td  {border-left-color:#8db71f;border-right-color:#8db71f;}
+.cuesTableRowEven                   {background-color:#f1f5fa;}
+.cuesTableRowEven td                {border-bottom:1px solid #ebebeb;border-left:1px solid #f1f5fa;border-right:1px solid #f1f5fa;}
+.cuesTableRowEvenSelected           {background:#8db71f url(../cues_images/tableSelectedRowBg.gif) top left repeat-x;}
+.cuesTableRowEvenSelected td        {border-bottom:1px solid #ebebeb;border-left:1px solid transparent;border-right:1px solid transparent;color:#ffffff;}
+* html .cuesTableRowEvenSelected td {border-left-color:#8db71f;border-right-color:#8db71f;}
+.cuesTableRowOddErrored             {background-color:#ebbdbd;}
+.cuesTableRowOddErrored td          {border-bottom:1px solid #f8f8f8;}
+.cuesTableRowOddErroredSelected     {background-color:#ebbdbd;}
+.cuesTableRowOddErroredSelected td  {border-bottom:1px solid #f8f8f8;}
+.cuesTableRowEvenErrored            {background-color:#ebbdbd;}
+.cuesTableRowEvenErrored td         {border-bottom:1px solid #ebebeb;}
+.cuesTableRowEvenErroredSelected    {background-color:#ebbdbd;}
+.cuesTableRowEvenErroredSelected td {border-bottom:1px solid #ebebeb;}
+.cuesTableRowEmpty                  {background-color:#F8F8F8;}
+.cuesTableRowEmpty td               {padding:2px 8px;vertical-align:text-top;line-height:20px;}
+.cuesTableTreeRowTopOdd              {background-color:#e5ebf3;}
+.cuesTableTreeRowTopOdd td           {border-top:1px solid #8499a2;}
+.cuesTableTreeRowTopOddSelected      {background-color:#92b041;}
+.cuesTableTreeRowTopOddSelected td   {border-top:1px solid #8499a2;}
+.cuesTableTreeRowTopOddSelected *    {background-color:#92b041;}
+.cuesTableTreeRowTopEven             {background-color:#f1f5fa;}
+.cuesTableTreeRowTopEven td          {border-top:1px solid #8499a2;}
+.cuesTableTreeRowTopEvenSelected     {background-color:#92b041;}
+.cuesTableTreeRowTopEvenSelected td  {border-top:1px solid #8499a2;}
+.cuesTableTreeRowTopEvenSelected *   {background-color:#92b041;}
+.cuesTableTreeRowChildOdd            {background-color:#e5ebf3;}
+.cuesTableTreeRowChildOddSelected    {background-color:#92b041;} 
+.cuesTableTreeRowChildOddSelected *  {background-color:#92b041;} 
+.cuesTableTreeRowChildEven           {background-color:#f1f5fa;}
+.cuesTableTreeRowChildEvenSelected   {background-color:#92b041;} 
+.cuesTableTreeRowChildEvenSelected * {background-color:#92b041;} 
+.cuesTableButtonArea                {width:100%;background-color:#d9e3e9;border-left:1px solid #8499a2;border-right:1px solid #8499a2;border-bottom:1px solid #8499a2;}
+.cuesTableButtonArea td             {padding:4px;}
+.cuesTablePagingArea                {background-color:#a2b9c9;}
+.cuesTableTitlelessContainer .cuesTablePagingArea {visibility:hidden;}
+.cuesTablePagingButton              {padding-left:0;padding-right:0;}
+.cuesTablePagingButton img          {vertical-align:text-bottom;}
+.cuesTablePagingItems               {font-family:Arial;color:#000000;font-style:italic;}
+.cuesTablePagingRowsPer             {font-family:Arial;color:#000000;}
+.cuesTablePagingGoto                {font-family:Arial;color:#000000;}
+.cuesTablePagingGoto td             {padding:0px;}
+td.cuesTableReorderColumn           {color:#000000;width:20px;background-color:#d9e3e9;border-right:1px solid #ffffff;border-bottom:1px solid #ffffff;padding:2px 8px;vertical-align:middle;line-height:20px;text-align:right;background-image:none;}
+th.cuesTableReorderColumn           {color:#000000;width:20px;background-color:#d9e3e9;border-right:1px solid #ffffff;border-bottom:1px solid #ffffff;padding:2px 8px;vertical-align:middle;line-height:20px;text-align:right;background-image:none;}
+.cuesTableSelectionColumn           {color:#000000;width:20px;padding:2px 8px;}
+.cuesTableRowSpecial                {background-color:#ebebeb;}
+.cuesTableRowSpecial td             {border-top:1px solid #8499a2;font-family:Arial;font-size:12px;font-weight:normal;border-left:1px solid #dbdbdb;border-right:1px solid #ffffff;}
+.IESmallestText .cuesTableRowSpecial td {font-size:9px;}
+.IESmallerText  .cuesTableRowSpecial td {font-size:10px;}
+.IENormalText   .cuesTableRowSpecial td {font-size:12px;}
+.IELargerText   .cuesTableRowSpecial td {font-size:14px;}
+.IELargestText  .cuesTableRowSpecial td {font-size:16px;}
+.cuesTableRowAccessibility          {}
+.cuesTableRowAccessibility th       {position:absolute;left:-999em;width:1em;overflow:hidden;font-size:1px;}
+.cuesTableRowAccessibility td       {position:absolute;left:-999em;width:1em;overflow:hidden;font-size:1px;}
+.cuesTableTitlelessBg               {border-bottom:1px solid #8499a2;}
+.cuesTableTitlelessBg td            {font-size:1px;line-height:1px;background-color:transparent;}
+/* scrollable table */
+.cuesTableTitleContainer            {background-color:#a2b9c9;border:1px solid #8499a2;}
+.cuesTableTitlelessContainer        {border-bottom:1px solid #8499a2;}
+.cuesTableTitle                     {font-family:Arial;font-size:12px;font-weight:bold;color:#000000;padding:2px 8px;line-height:16px;vertical-align:middle;}
+.IESmallestText .cuesTableTitle {font-size:9px;}
+.IESmallerText  .cuesTableTitle {font-size:10px;}
+.IENormalText   .cuesTableTitle {font-size:12px;}
+.IELargerText   .cuesTableTitle {font-size:14px;}
+.IELargestText  .cuesTableTitle {font-size:16px;}
+.cuesTableHeaderContainer           {overflow:hidden;background-color:#d9e3e9;border-left:1px solid #8499a2;border-right:1px solid #8499a2;}
+.cuesTableHeader                    {table-layout:fixed;white-space:nowrap;}
+.cuesTableHeader th                 {background-color:#d9e3e9;border-left:1px solid #dbdbdb;border-right:1px solid #ffffff;font-family:Arial;font-size:12px;font-weight:normal;padding:2px 8px;text-align:left;vertical-align:middle;line-height:16px;}
+.IESmallestText .cuesTableHeader th {font-size:9px;}
+.IESmallerText  .cuesTableHeader th {font-size:10px;}
+.IENormalText   .cuesTableHeader th {font-size:12px;}
+.IELargerText   .cuesTableHeader th {font-size:14px;}
+.IELargestText  .cuesTableHeader th {font-size:16px;}
+.cuesTableHeader td                 {background-color:#d9e3e9;border-left:1px solid #dbdbdb;border-right:1px solid #ffffff;font-family:Arial;font-size:12px;font-weight:normal;padding:2px 8px;text-align:left;vertical-align:middle;line-height:16px;}
+.IESmallestText .cuesTableHeader td {font-size:9px;}
+.IESmallerText  .cuesTableHeader td {font-size:10px;}
+.IENormalText   .cuesTableHeader td {font-size:12px;}
+.IELargerText   .cuesTableHeader td {font-size:14px;}
+.IELargestText  .cuesTableHeader td {font-size:16px;}
+.cuesTableContentContainer          {height:50px;overflow:auto;border-left:1px solid #8499a2;border-right:1px solid #8499a2;border-bottom:1px solid #8499a2;background-color:#d9e3e9;}
+.cuesTableContent                   {table-layout:fixed;white-space:nowrap;}
+.cuesTableContent td                {padding:2px 8px;line-height:20px;}
+.cuesTableNonscrollable             {width:100%;border-right:1px solid #8499a2; border-bottom:1px solid #8499a2;border-left:1px solid #8499a2;}
+.cuesTableNonscrollable th          {background-color:#d9e3e9;border-left:1px solid #dbdbdb;border-right:1px solid #ffffff;font-family:Arial;font-size:12px;font-weight:normal;padding:2px 8px;text-align:left;vertical-align:middle;line-height:16px;border-bottom:1px solid #8499a2;}
+.IESmallestText .cuesTableNonscrollable th {font-size:9px;}
+.IESmallerText  .cuesTableNonscrollable th {font-size:10px;}
+.IENormalText   .cuesTableNonscrollable th {font-size:12px;}
+.IELargerText   .cuesTableNonscrollable th {font-size:14px;}
+.IELargestText  .cuesTableNonscrollable th {font-size:16px;}
+.cuesTableNonscrollable td          {padding:2px 8px;vertical-align:middle;line-height:16px;}
+.cuesTableSpecialContainer          {overflow:hidden;background-color:#d9e3e9;border-left:1px solid #8499a2;border-right:1px solid #8499a2;border-bottom:1px solid #8499a2;}
+.cuesTableSpecial                   {table-layout:fixed;white-space:nowrap;}
+.cuesTableSpecial td                {padding:2px 8px;}
+.cuesTableGroupContainer            {background-color:#d9e3e9;;}
+/* resizable columns */
+.cuesResizeColumnLayer              {z-index:999;position:absolute;top:0;left:0;height:100%;width:100%;display:none;opacity:.40;filter:alpha(opacity=40);background-color:white;overflow:hidden;cursor:col-resize;}
+#cuesResizeColumnBox                {position:absolute;top:0;left:0;width:20px;border:1px dashed black;background-color:#6b7485;}
+.cuesResizableTable td              {overflow:hidden;}
+.cuesResizableTable th              {overflow:hidden;}
+/* sortable table column */
+.cuesSortableColumn          {padding-right:30px;}
+.cuesSortableColumn:link     {color:#000000;text-decoration:none;}
+.cuesSortableColumn:visited  {color:#000000;text-decoration:none;}
+.cuesSortableColumn:hover    {color:#000000;text-decoration:none;}
+.cuesSortableColumn:active   {color:#000000;text-decoration:none;}
+.cuesSortednone              {font-weight:normal;}
+.cuesSortedascending         {font-weight:bold;}
+.cuesSorteddescending        {font-weight:bold;}
+.cuesTableRowHover           {background-color:#b2f0fc;}
+.cuesTableRowHover td2       {border-bottom:1px solid #f8f8f8;border-left:1px solid #b2f0fc;border-right:1px solid #b2f0fc;}
+.cuesTableMultiFilterTogglerShown         {padding:0px;margin-right:2px;}
+.cuesTableMultiFilterTogglerShown span    {background-image:url(../cues_images/treetableExpandCollapse60.gif);
+                                           background-repeat:no-repeat;
+                                           background-position:-2 0;}
+.cuesTableMultiFilterTogglerHidden        {padding:0px;margin-right:2px;}
+.cuesTableMultiFilterTogglerHidden span   {background-image:url(../cues_images/treetableExpandCollapse60.gif);
+                                           background-repeat:no-repeat;
+                                           background-position:-16 0;}
+.cuesTableMultiFilterTogglerDisabled      {padding:0px;margin-right:2px;}
+.cuesTableMultiFilterTogglerDisabled span {background-image:url(../cues_images/treetableExpandCollapse60.gif);
+                                           background-repeat:no-repeat;
+                                           background-position:-16 0;}
+.cuesTableSpan td                   {border-bottom:1px solid #a3bbca;border-right:1px dotted #a3bbca;}
+.cuesTableSelectionCountArea        {background-color:#a2b9c9;font-family:Arial;color:#000000;font-style:italic;}
+* html .cuesTableSelectionCountArea {vertical-align:baseline;}
+.cuesTableBulkSelectionArea         {background-color:#d9e3e9;height:21px;line-height:21px;}
+.cuesTableBulkSelectionArea td      {border-top:1px solid #8499a2;}
+.cuesTableBulkSelectionContainer    {padding:0px 8px;position:relative;word-spacing:nowrap;z-index:0;zoom:1;overflow:hidden;}
+.cuesTableBulkSelectionLayer        {background-color:#ffff99;position:absolute;top:0;left:0;width:2000px;height:100px;overflow:hidden;z-index:-2;zoom:1;}
+.cuesTableBulkSelectionContainer a         {color:#0088c2;}
+.cuesTableBulkSelectionContainer a:link    {color:#0088c2;}
+.cuesTableBulkSelectionContainer a:hover   {color:#0088c2;}
+.cuesTableBulkSelectionContainer a:active  {color:#0088c2;}
+.cuesTableBulkSelectionContainer a:visited {color:#0088c2;}
+
+/* Tab */
+.cuesTabContentRowBg       {width:100%;padding:0;margin:0;background-color:transparent;}
+.cuesTabNavRowBg           {background-color:#6b7485;border-bottom:0px solid #dbdbdb;border-right:0px solid #858A91;border-left:0px solid #858A91;width:100%;margin:0;padding:0;}
+.cuesTabBgNonActive        {text-align:center;width:100%;background-position:100%;background-image:url('../cues_images/tabBgNonActive.gif'); padding: 0px 3px 0px 6px;cursor:pointer;font-size:12px;}
+.IESmallestText .cuesTabBgNonActive {font-size:9px;}
+.IESmallerText  .cuesTabBgNonActive {font-size:10px;}
+.IENormalText   .cuesTabBgNonActive {font-size:12px;}
+.IELargerText   .cuesTabBgNonActive {font-size:14px;}
+.IELargestText  .cuesTabBgNonActive {font-size:16px;}
+.cuesTabBgNonActiveContent {text-align:center;width:100%;background-position:100%;background-image:url('../cues_images/tabBgNonActiveContent.gif'); padding: 0px 3px 0px 6px;cursor:pointer;font-size:12px;}
+.IESmallestText .cuesTabBgNonActiveContent {font-size:9px;}
+.IESmallerText  .cuesTabBgNonActiveContent {font-size:10px;}
+.IENormalText   .cuesTabBgNonActiveContent {font-size:12px;}
+.IELargerText   .cuesTabBgNonActiveContent {font-size:14px;}
+.IELargestText  .cuesTabBgNonActiveContent {font-size:16px;}
+.cuesTabBgActiveNavTree    {text-align:center;width:100%;background-position:100%;background-image:url('../cues_images/tabBgActiveNavTree.gif'); padding: 3px 2px 0px 6px;font-weight:bold;font-size:12px;}
+.IESmallestText .cuesTabBgActiveNavTree {font-size:9px;}
+.IESmallerText  .cuesTabBgActiveNavTree {font-size:10px;}
+.IENormalText   .cuesTabBgActiveNavTree {font-size:12px;}
+.IELargerText   .cuesTabBgActiveNavTree {font-size:14px;}
+.IELargestText  .cuesTabBgActiveNavTree {font-size:16px;}
+.cuesTabBgActiveNavDrawers {text-align:center;width:100%;background-position:100%;background-image:url('../cues_images/tabBgActiveNavDrawers.gif'); padding: 3px 2px 0px 6px;font-weight:bold;font-size:12px;}
+.IESmallestText .cuesTabBgActiveNavDrawers {font-size:9px;}
+.IESmallerText  .cuesTabBgActiveNavDrawers {font-size:10px;}
+.IENormalText   .cuesTabBgActiveNavDrawers {font-size:12px;}
+.IELargerText   .cuesTabBgActiveNavDrawers {font-size:14px;}
+.IELargestText  .cuesTabBgActiveNavDrawers {font-size:16px;}
+.cuesTabBgActiveContent    {text-align:center;width:100%;background-position:100%;background-image:url('../cues_images/tabBgActiveContent.gif'); padding: 3px 2px 0px 6px;font-weight:bold;font-size:12px;}
+.IESmallestText .cuesTabBgActiveContent {font-size:9px;}
+.IESmallerText  .cuesTabBgActiveContent {font-size:10px;}
+.IENormalText   .cuesTabBgActiveContent {font-size:12px;}
+.IELargerText   .cuesTabBgActiveContent {font-size:14px;}
+.IELargestText  .cuesTabBgActiveContent {font-size:16px;}
+a.cuesTabLink:link         {text-decoration:none;} 
+a.cuesTabLink:visited      {text-decoration:none;} 
+a.cuesTabLink:hover        {text-decoration:none;} 
+a.cuesTabLink:active       {text-decoration:none;} 
+.cuesTabNavGapBelow        {font-size:1px;line-height:8px;background-color:#dbdbdb;}
+.cuesTabContainer          {z-index:0;position:relative;padding:2px 4px 2px 4px;border-left:1px solid #8499a2;border-right:1px solid #8499a2;border-bottom:1px solid #8499a2;overflow:hidden;}
+.cuesTabContainerIE        {width:100%;}
+.cuesTabContainerFF        {display:block;}
+.cuesTabContainerLayer     {z-index:-1;position:absolute;top:0px;left:0px;padding:0px;height:1600px;width:2000px;opacity:.40;filter:alpha(opacity=40);background-color:white;overflow:hidden;}
+.cuesTabErrorIndicator     {height:12px;width:12px;border:0;}
+.cuesTabLabel              {color:transparent;font-size:1px;width:0px;height:0px;}
+.cuesActiveTab             {position:relative;margin-top:0px;margin-bottom:0px;}
+.cuesNonactiveTab          {position:relative;margin-top:0px;border-bottom:1px solid rgb(133,138,145);margin-bottom:0px;}
+.cuesNonactiveTabNonBottom {position:relative;margin-top:0px;margin-bottom:0px;}
+.cuesActiveTabNav          {position:relative;margin-top:0px;margin-bottom:0px;}
+.cuesNonactiveTabNav       {position:relative;margin-top:0px;border-bottom:1px solid #6b7485;margin-bottom:0px;}
+.cuesActiveTab img         {vertical-align:top;margin-top:0px;}
+.cuesNonactiveTab img      {vertical-align:top;margin-top:0px;}
+.cuesTab                          {position:relative;z-index:0;padding:0;margin:0;cursor:pointer;}
+.cuesTabCaption                   {padding-left:9px;padding-right:8px;padding-top:6px;padding-bottom:3px;}
+.cuesTabCaptionActive             {font-weight:bold;color:#000000;}
+.cuesTabCaptionActive a:link      {color:#000000;} 
+.cuesTabCaptionActive a:active    {color:#000000;} 
+.cuesTabCaptionActive a:visited   {color:#000000;} 
+.cuesTabCaptionActive a:hover     {color:#000000;} 
+.cuesTabCaptionInactive           {font-weight:normal;color:#000000;}
+.cuesTabCaptionInactive a:link    {color:#000000;}
+.cuesTabCaptionInactive a:visited {color:#000000;}
+.cuesTabCaptionInactive a:hover   {color:#000000;}
+.cuesTabCaptionInactive a:active  {color:#000000;}
+.cuesTabGap                       {font-size:6px;border-bottom:1px solid #8499a2;}
+.cuesTabFiller                    {width:100%;font-size:6px;border-bottom:1px solid #8499a2;}
+.cuesTabContentsHeader            {background-color:#ffffff;border-left:1px solid #8499a2;border-right:1px solid #8499a2;line-height:5px;}
+.cuesTabContents                  {padding:8px;background-color:white;border-left:1px solid #8499a2;border-right:1px solid #8499a2;border-bottom:1px solid #8499a2;}
+
+/* TaskPanel */
+.cuesTaskPanel            {font-family:Arial;font-weight:bold;font-size:12px;color:white;z-index:1;padding:5 5 5 5;vertical-align:middle;}
+#cuesTaskPanelTearoff     {padding-right:2px;padding-left:2px;}
+#cuesTaskPanelTearoff img {border:0;height:16px;width:16px;vertical-align:middle;}
+#cuesTaskPanelCloser      {padding-right:2px;padding-left:2px;}
+#cuesTaskPanelCloser img  {border:0;height:16px;width:16px;vertical-align:middle;}
+.cuesTaskPanelContent     {}
+
+/* Toolbar */
+.cuesToolbarMain                 {height:31px;margin-left:14px;margin-right:16px;position:relative;overflow:hidden;margin-bottom:4px;}
+.cuesToolbarContent              {height:31px;margin-left:10px;margin-right:10px;position:relative;overflow:hidden;}
+.cuesToolbarContainer            {position:absolute;left:2px;top:1px;}
+.cuesToolbarCell                 {padding:0 7px; cursor:pointer;}
+.cuesToolbarEmptyCell            {padding:0 0 0 6px; cursor:pointer;}
+.cuesToolbarCellDisabled         {padding:0 7px; cursor:default;}
+.cuesToolbarEmptyCellDisabled    {padding:0 0 0 6px; cursor:default;}
+.cuesToolbarIcon                 {margin:0 6px 0 0;vertical-align:middle;}
+a.cuesToolbarLink:link           {color:#000000;text-decoration:none;} 
+a.cuesToolbarLink:visited        {color:#000000;text-decoration:none;}
+a.cuesToolbarLink:hover          {color:#000000;text-decoration:none;}
+a.cuesToolbarLink:active         {color:#000000;text-decoration:none;} 
+.cuesToolbarDropdownCell         {cursor:pointer;}
+.cuesToolbarDropdownCellDisabled {cursor:default;}
+.cuesToolbarField                {padding:0 7px;white-space:nowrap;}
+
+/* Transferbox */
+.cuesTransferboxButton       {height:22px;width:30px;}
+.cuesTransferboxButton img   {vertical-align:text-bottom;;margin-top:0px;}
+.cuesTransferboxSmallGap     {line-height:4px;clear:both;}
+.cuesTransferboxLargeGap     {line-height:27px;clear:both;}
+
+/* Tree */
+.treeIcon                             {vertical-align:middle;}
+.treeCheckbox                         {margin-top:-3px;vertical-align:middle;}
+.treeRadiobutton                      {margin-top:-3px;vertical-align:middle;}
+.mixedtreeCheckbox                    {margin-top:-3px;vertical-align:middle;background-color:#c0c0c0;-moz-appearance:none;}
+.treeSelectedNode	              {background-color:#C0D1D9;}
+/* ClientTree */
+.cuesClienttreeToggler                {margin-right:7px;}
+.cuesClienttreeChildren               {margin-left:17px;}
+.cuesClienttreenodeFocus              {background-color:#c0c0c0;}
+
+/* Treetable */
+.cuesTreetableNodeExpanded            {border:0px;width:16px;height:16px;cursor:pointer;background-color:transparent;}
+.cuesTreetableNodeExpanded span       {display:block;width:16px;background-image:url('../cues_images/treetableExpandCollapse60.gif');background-position:-2px;background-color:transparent;}
+.cuesTreetableNodeCollapsed           {border:0px;width:16px;height:16px;cursor:pointer;background-color:transparent;}
+.cuesTreetableNodeCollapsed span      {display:block;width:16px;background-image:url('../cues_images/treetableExpandCollapse60.gif');background-position:-16px;background-color:transparent;}
+.cuesTreetableNodeLeaf                {visibility:hidden;}
+
+/* Wizard - inpage */
+.cuesWizardPaneInpage              {padding:10px;border:1px solid #8499a2;background-image:url(../cues_images/ToolbarMain.png);}
+.cuesWizardTitleInpage             {font-family:Arial;font-size:15px;width:100%;color:#53636A;text-align:left;margin-bottom:15px;margin-top:20px;}
+.cuesWizardTitleInpageHidden       {display:none;width:100%;}
+.cuesWizardContentInpage           {text-align:left;padding:0px;}
+.cuesWizardContentInpageHidden     {text-align:left;display:none;padding:0px;}
+#cuesWizardStepsInpage             {text-align:left;}
+.cuesWizardStepInpageactive        {display:inline;padding-left:17px;margin-right:4px;font-family:Arial;font-size:12px;color:#000000;font-weight:bold;}
+.cuesWizardStepInpageactiveerror   {display:inline;padding-left:17px;margin-right:4px;font-family:Arial;font-size:12px;color:#000000;font-weight:bold;background-image:url(../cues_icons/wizard_error.gif);background-repeat:no-repeat;background-position:0 50%;}
+.cuesWizardStepInpagefuture        {display:inline;padding-left:17px;margin-right:4px;font-family:Arial;font-size:12px;color:#8e8e8e;}
+.cuesWizardStepInpagecomplete      {display:inline;padding-left:17px;margin-right:4px;font-family:Arial;font-size:12px;color:#000000;background-image:url(../cues_icons/wizard_check.gif);background-repeat:no-repeat;background-position:0 50%;}
+.cuesWizardStepInpagecompleteerror {display:inline;padding-left:17px;margin-right:4px;font-family:Arial;font-size:12px;color:#000000;background-image:url(../cues_icons/wizard_error.gif);background-repeat:no-repeat;background-position:0 50%;}
+/* Wizard - standalone */
+.cuesWizardPage              {background-color:#ecf0f3;padding:8px;}
+.cuesWizardPane              {border:1px solid #8499a2;background-color:#ffffff;}
+.cuesWizardLeftPane          {background-color:#ffffff;}
+.cuesWizardContentPane       {background-color:#ffffff;}
+.cuesWizardContent           {padding:14px;}
+.cuesWizardContentHidden     {display:none;padding:14px;}
+.cuesWizardTitle             {font-family:Arial;font-size:15px;width:100%;color:#53636A;text-align:left;margin-bottom:15px;}
+.cuesWizardTitleHidden       {display:none;width:100%;}
+.cuesWizardStepactive        {padding-left:19px;margin-left:7px;margin-right:14px;font-family:Arial;font-size:12px;color:#ffffff;font-weight:bold;background-color:#8fbd18;}
+.cuesWizardStepactiveerror   {padding-left:19px;margin-left:7px;margin-right:14px;font-family:Arial;font-size:12px;color:#ffffff;font-weight:bold;background-color:#8fbd18;background-image:url(../cues_icons/wizard_error.gif);background-repeat:no-repeat;background-position:0 50%;}
+.cuesWizardStepfuture        {padding-left:19px;margin-left:7px;margin-right:14px;font-family:Arial;font-size:12px;color:#8e8e8e;}
+.cuesWizardStepcomplete      {padding-left:19px;margin-left:7px;margin-right:14px;font-family:Arial;font-size:12px;color:#000000;background-image:url(../cues_icons/wizard_check.gif);background-repeat:no-repeat;background-position:0 50%;}
+.cuesWizardStepcompleteerror {padding-left:19px;margin-left:7px;margin-right:14px;font-family:Arial;font-size:12px;color:#000000;background-image:url(../cues_icons/wizard_error.gif);background-repeat:no-repeat;background-position:0 50%;}
+/* Wizard - common */
+#cuesWizardNav               {}
+

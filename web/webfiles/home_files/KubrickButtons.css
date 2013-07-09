@@ -1,0 +1,18 @@
+.kubrickButton {
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	background: url("btn_bg.gif") repeat-x 0 -1px transparent;
+	height: 21px;
+	margin: 0;
+	padding: 0 6px;
+	font-family: Arial;
+	font-size: 12px;
+	border: 1px solid #53636A;
+	cursor: pointer;
+}
+.kubrickButtonHover {
+	background: url("btn_bg.gif") repeat-x 0 -43px transparent !important;
+}
+.kubrickButtonClick {
+	background: url("btn_bg.gif") repeat-x 0 -22px transparent !important;
+}
