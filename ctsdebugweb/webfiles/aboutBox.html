@@ -1,0 +1,185 @@
+<html style="font-size: 12px;" lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+
+
+
+
+
+
+
+
+
+	
+		<title>Cisco TelePresence Diagnostics</title>
+			
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<script language="javascript">
+			var noValueMsg = "$0: invalid blank value.";
+			var notInRangeMsg = "$0: '$1' is not a valid integer value or is not in the allowable range [$2 - $3].";
+			var invalidIntegerMsg = "$0: '$1' is not a valid integer value.";
+			var invalidPhoneMsg = "$0: '$1' is not a valid phone number (example: 408 123 4567).";
+			var invalidIpMsg = "$0: '$1' is not a valid IP address.";
+			var fileNotExistMsg = "$0: File '$1' does not exist.";
+			var invalidLenMsg = "$0: must be [$2 - $3] digits. '$1' is not within the range of digits.";
+			
+			var nextButtonLabel = "Next >";
+			var backButtonLabel = "< Back";
+			var cancelButtonLabel = "Cancel";
+			var finishButtonLabel = "Finish";
+			
+			var addButtonLabel = "Add"
+			var deleteButtonLabel = "Delete"
+			
+			var applyButtonLabel = "Apply"
+			var resetButtonLabel = "Cancel"
+			
+			var loginButtonLabel = "Log In";
+			
+			var resyncButtonLabel = "Resync";
+			
+			var theModuleOkState = "OK";
+			var theModuleErrorState = "Error";
+			var theModuleUnInitState = "Un-Initialized";
+			var theModuleStoppedState = "Stopped";
+			var theModuleStartingState = "Starting";
+			
+			var theTableLoadingMsg = "Loading table entries...";
+			
+			var theTableRecordCountMsg = "Showing $0 - $1 of $2 records";
+			
+			var theMeetingNoSubjectMsg = "[Empty Subject]";
+			
+			var theRefineFilterMsg = "Too many matching records found. Displaying only the first $0 of $1 records.";
+			
+			var theNoExportAllowedMsg = "Too many matching records.  Exporting of data is not allowed to prevent data inconsistency.";
+	
+			var theMaxTableEntriesPerLoad = 100;
+	
+			var theMaxTableEntries = 5000;
+	
+			// sort ordering
+			var ASCENDING = 1;
+			var DESCENDING = 2;
+			
+			function getI18NMessage(aMsg, token1, token2, token3, token4, token5) {
+				var theNewMsg = aMsg;
+				
+				var theToken1 = toMyString(token1);
+				var theToken2 = toMyString(token2);
+				var theToken3 = toMyString(token3);
+				var theToken4 = toMyString(token4);
+				var theToken5 = toMyString(token5);
+
+				if (theNewMsg != null) {
+					theNewMsg = theNewMsg.replace("$0", theToken1);
+					theNewMsg = theNewMsg.replace("$1", theToken2);
+					theNewMsg = theNewMsg.replace("$2", theToken3);
+					theNewMsg = theNewMsg.replace("$3", theToken4);
+					theNewMsg = theNewMsg.replace("$4", theToken5);
+				}
+				return theNewMsg;
+			}
+			
+			function confirmToSaveChanges(extraMsg) {
+				var theMsg = "";
+				if (extraMsg && extraMsg != null && extraMsg != "") {
+					theMsg += extraMsg + "\n";
+				}
+				theMsg += "Are you sure you want to apply the changes?";
+				return confirm(theMsg);
+			}
+			
+			function toMyString(aToken) {
+				if (aToken != null) {
+					return "" + aToken;
+				} else {
+					return "";
+				}	
+			}
+	
+			function formatLocaleString(aDate) {
+				var theStr = aDate.toLocaleString();
+				theStr += " (America/Los_Angeles)";
+				return theStr;
+			}
+			
+			function formatLongDate(aDate) {
+				var theLongFormat = "EE, MMM dd, yyyy h:mm:ss a";
+				var theStr = aDate.format(theLongFormat);
+				theStr += " (America/Los_Angeles)";
+				return theStr;
+			}
+			
+			function formatLongUTCDate(aDate) {
+				var theLongFormat = "EE, MMM dd, yyyy h:mm:ss a";
+				var theStr = aDate.formatUTC(theLongFormat);
+				theStr += " (Etc/UTC)";
+				return theStr;
+			}
+			
+			function checkTestConnectionResult(aHost, trueEval, falseEval) {
+
+			}
+			
+		</script>
+
+
+		<script type="text/javascript" src="aboutBox.do_files/ctis.js"></script>
+		<script type="text/javascript" src="aboutBox.do_files/misc.js"></script>
+		<script type="text/javascript" src="aboutBox.do_files/browserCheck.js"></script>
+		<script>
+			function setUp() {
+				window.focus();
+			}
+			
+			function openLicenseFile() {
+				OpenModalWin("/adminui/license/licenseAgreementDialog.jsp", 
+								'LicenseAgreement','700','500','no','no','no');
+			}
+			
+		</script>
+	<script src="aboutBox.do_files/cues_taglib.js" language="JavaScript"></script><script>cuesKnownLocation='/adminui/';cuesImageFolder='cues_images';cuesIconFolder='cues_icons';cuesVersion='61';cuesXslSkin='base';cuesImageSuffix='';</script><script src="aboutBox.do_files/cues_fonts.js" language="JavaScript"></script><link id="cuesCSS" href="aboutBox.do_files/cues_taglib.css" rel="stylesheet" type="text/css"><script src="aboutBox.do_files/cues_drawn.js" language="JavaScript"></script><script>msgInvalidData="Invalid data has been entered";msgNoncontiguousReorder="You can only reorder selected rows that are contiguous";altExpandDrawer="Expand";altCollapseDrawer="Collapse";altExpandNav="Expand Navigation Pane";altCollapseNav="Collapse Navigation Pane";altExpandTree="Expand tree item";altCollapseTree="Collapse tree item";altLeafTree="Leaf";altWizardStepErrorState="Wizard step contains 1 or more errors";altTabErrorState="Tab contains 1 or more errors";msgEmptyRow="No data to display";altExpandPane="Expand";altCollapsePane="Collapse";altRestorePane="Restore";altInformationalMessage="Informational message";altCriticalErrorMessage="Critical error message";altErrorMessage="Error message";altWarningMessage="Warning message";altSuccessMessage="Success message";var cuesMaskeditFormatError = new Array();cuesMaskeditFormatError["ipv6"]="A valid IPv6 address is n:n:n:n:n:n:n:n where the 'n's are either digits (0-9) or letters (A-F)";cuesMaskeditFormatError["miltime2"]="The entered time must be in the range of 0:00 to 23:59";cuesMaskeditFormatError["mac"]="A valid MAC address is nn:nn:nn:nn:nn:nn where the 'n's are either digits (0-9) or letters (A-F)";cuesMaskeditFormatError["ipv6mask"]="Invalid data has been entered";cuesMaskeditFormatError["netmask"]="A valid netmask consists of four numbers (0-255) separated by periods, e.g. 123.0.255.3";cuesMaskeditFormatError["ipv4"]="A valid IPv4 address consists of four numbers (0-255) separated by periods, e.g. 123.0.255.3";cuesMaskeditFormatError["time2"]="The entered time must be in the range of 1:00 to 12:59";</script>
+
+	</head><body onLoad="setUp();">
+    <div class="cuesBackground"><img class="cuesBackgroundImage" src="aboutBox.do_files/pageBackground.jpg" title="" alt=""></div>
+      
+        
+        <div style="padding-top: 159px;" class="cuesAboutProductName">Cisco TelePresence Diagnostics</div>
+        
+        
+      
+        
+        <div class="cuesAboutVersionInfo">1.0(1000)</div>        
+        
+        
+      <table><tbody><tr><td valign="bottom" width="100%">
+        
+        
+        
+        <div id="cuesAboutCopyright" class="cuesAboutCopyright">
+         © 2006-2010 Cisco Systems, Inc.<br>
+								Cisco, Cisco Systems and Cisco Systems logo are registered<br>
+									trademarks of Cisco Systems, Inc. and/or its affiliates in the U.S.<br>
+									and certain other countries
+        </div><script>setTimeout("cuesResizeCopyright()",100);</script>
+      </td><td valign="bottom"><img onload="cuesFixPNG(null,this);" id="cuesAboutLogoImage" src="aboutBox.do_files/cisco_logo_about.png" title="Cisco.com" alt="Cisco.com"></td></tr></tbody></table><script>if (document.addEventListener)  window.addEventListener('load', cuesResizeAboutWindowToContent, false);else if (document.attachEvent)  window.attachEvent('onload', cuesResizeAboutWindowToContent);</script>
+
+   
+	
+	
+	</body></html>

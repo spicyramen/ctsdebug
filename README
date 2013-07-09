@@ -1,0 +1,148 @@
+CTS Diagnostics 0.1(1002)
+Author: Gonzalo Gasca
+Cisco Systems, Inc
+TelePresence Exchange Business Unit
+
+Disclaimer
+---------------------------------------------------------------------------------------------------------------
+	The tools out here are not TAC nor BU supported.When a tool is not supported by TAC, it is a "use at your 
+own risk" tool. You can get help with these tools using the public forum (link below), but TAC will not assist you.
+
+Introduction
+---------------------------------------------------------------------------------------------------------------
+
+	This document explains how to install, configure and use CTS Diagnostics tool.
+CTS Diagnostics tool was created to access basic information stored in TelePresence Log files.
+This information will provide TAC or Cisco Partners valuable details for the CTS systems.
+This reduce the time, extracting manually and reading log files to capture basic network info and versions.
+
+This initial version permits users to obtain:
+
+- Network information
+- System version
+- System Errors
+- Serial Numbers
+- Obtain Serial numbers and access latest Field Notices for possible match.
+- Email reporting
+
+This initial draft will permit collect more information about user needs.
+Next version will include:
+
+- SIP Call analysis
+- Audio and video statistics
+- MUX call analysis
+- Defect analysis and possible solution. This feature will search keywords and look against database to match possible defects
+  if any errors are present. Example: Abnormal call disconnect
+  
+
+Install Your Software
+---------------------------------------------------------------------------------------------------------------
+
+Installation notes (CLI)
+CTS Diagnostics 1.0(1002) CLI version
+---------------------------------------------------------------------------------------------------------------
+
+System Requirements:
+
+MAC OSX 10.6, CentOS, RedHat, or any Linux Based Operating system 
+Perl 5.0 or above
+We use the following CPAN modules:
+
+use Archive::Extract;
+use File::Spec;
+use File::Basename;  
+use HTTP::Request::Common;
+use LWP::UserAgent;
+use Net::SMTP;
+use Net::DNS
+
+Compile Perl script from command line to confirm system contains all modules needed
+perl -c <script name>
+
+Depending the errors, install required platforms or software.
+(Example:) 
+cpan -i Archive:Extract
+
+Configure your software:
+
+- Download Script
+- Download menufile.txt
+- Modify GLOBAL Variables:
+
+$MENULOCATION	  Menu file location (menufile.txt)
+$userAgent->proxy (HTTP Proxy)
+$host			  (SMTP server)
+
+- Compile script perl -c <script name>
+- Change permissions to be executable chmod 755 <script name>
+- Run script
+
+
+Installation notes (Web)
+CTS Diagnostics 1.0(1002) CGI version
+---------------------------------------------------------------------------------------------------------------
+
+System Requirements:
+
+MAC OSX 10.6, CentOS, RedHat, or any Linux Based Operating system 
+Perl 5.0 or above
+Apache
+
+
+- Install CentOS
+http://www.unix-tutorials.com/go.php?id=4470
+
+- Install Apache Web Server
+Select WebServer during installation or use yum install command
+
+- Enable CGI scripts in Apache
+Check httpd.conf 
+ScriptAlias /cgi-bin/ "/var/www/cgi-bin/"
+
+- Download CGI script and HTML files
+- Upload CGI script and HTML files
+- Place ctsdebug.cgi to /var/www/cgi-bin/
+- Place html files under /var/www/html
+
+	Create directory /var/www/html/ctsrepository/logs
+	Apply apache permissions for ctsrepository and logs subfolder
+	chown -R apache:apache ctsrepository/
+
+- Change permissions to ctsdebug.cgi
+	chmod 755 ctsdebug.cgi
+	ls -l ctsdebug.cgi
+	-rwxr-xr-x   1 lies     www           217 Sep 11 23:42 ctsdebug.cgi
+
+- Install Perl
+	yum groupinstall 'Development Tools'
+
+- Download Perl CPAN modules
+
+We use the following CPAN modules:
+
+use Archive::Extract;
+use CGI;  
+use CGI::Carp  
+use File::Spec;
+use File::Basename;  
+use HTTP::Request::Common;
+use LWP::UserAgent;
+use Net::SMTP;
+use Net::DNS
+
+Compile CGI script from command line to confirm system contains all modules needed
+perl -c ctsdebug.cgi
+
+Depending the errors, install required platforms or software.
+(Example:) 
+cpan -i Archive:Extract
+
+- Start Apache
+service httpd start
+
+- Verify Apache is working by typing your Server IP address
+go to main.html and verify your CTS Analyzer is running
+
+
+All contents are Copyright © 2011 Cisco Systems, Inc. All rights reserved.
+Important Notices and Privacy Statement. 

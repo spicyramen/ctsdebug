@@ -1,0 +1,873 @@
+/* Modified Corporate Branded Look 4/08/2005 - Version 0.02A 
+- This version elimnates the green bordered boxes.
+*/
+body {
+	font-family: Verdana;
+	color: #000000;
+	background: #F8F8F8;
+	height: 100%;
+	max-height: 100%;
+	margin: 0px;
+	padding: 0px;
+	border: none;
+	font-size: 0.7em;
+
+}
+
+table.pagelayout, table.menubar {
+    padding:0px;
+    margin:0px;
+    border-collapse:collapse;
+    border:none;
+}
+
+table.menubar {
+    border-top:solid 1px #666666;
+}
+
+td { font-size: 0.7em; }
+
+th { font-size: 0.6em; }
+
+option { color: #000000; background-color: #ffffff; }
+
+input, select, optgroup, option, textarea, button {font-family: Verdana; font-size: 1em;}
+
+.messagebox { background:#2F6681; overflow:hidden; border:solid 2px #000000;}
+.messagebox .pleasewait { font-size:17px; font-weight:500; color:#FFFFFF; text-align:center;}
+
+.skiplink {
+	display:none;	
+}
+.titlebar {
+	/* from cuesContent.css: #cuesContentTitleBg */
+	font-size: 1.5em;
+	top:0;
+	left:0;
+	right:1px;
+	height:29px;
+	max-height:29px;
+    border-top:1px solid #666666;
+    
+	/* border-right:1px solid #858A91; */
+	/* border-left:1px solid #858A91;  */
+
+	overflow:hidden;
+	background-color: #6B7485;
+	margin:0;
+	padding: 6px 0 0 0;
+	
+	/* from cuesContent.css: .cuesContentTitle */
+	font-family: Verdana;
+	font-weight : bold;
+	color: #FFFFFF;
+	margin: 0px 0px;
+}
+.titlebar .titlebar-title {
+    padding-left: 5px;
+}
+
+.titlebar .titlebar-unity-title {
+	font-weight: bold;
+	color: white;
+}
+
+.titlebar .titlebar-unity-breadcrumbs {
+	text-align: right;
+	font-family: Verdana;
+	text-decoration: none;
+	font-weight: normal;
+	font-size: 0.65em;
+}
+
+.titlebar .titlebar-unity-breadcrumbs img {
+	vertical-align: middle;
+}
+
+.titlebar .titlebar-unity-breadcrumbs a:link, .titlebar .titlebar-unity-breadcrumbs a:visited{
+	color: white;
+	text-decoration: none;
+	font-weight: normal;
+}
+
+.titlebar .titlebar-unity-breadcrumbs a:hover{
+	text-decoration: none;
+	font-weight: normal;
+}
+
+
+.titlebar .titlebar-jumpmenu {
+	text-align: right;
+}
+.titlebar .titlebar-breadcrumbs a:link, .titlebar .titlebar-breadcrumbs a:visited{
+	color: white;
+}
+.titlebar .titlebar-breadcrumbs a:hover{
+	color: yellow;
+}
+
+div.content-auto-scroll {
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    padding: 0px;
+}
+
+div.menubar {
+  margin: 0px;
+  background-color: #DFDFDF;
+  border: 1px solid;
+  border-color: #FFFFFF #DFDFDF #000000 #DFDFDF;
+  padding: 4px 2px 4px 2px;
+  text-align: left;
+}
+div.menubar a.menubar-menubutton {
+  background-color: transparent;
+  border: 1px solid #DFDFDF;
+  color: #000000;
+  cursor: default;
+  left: 0px;
+  margin: 1px;
+  padding: 2px 6px 2px 6px;
+  position: relative;
+  text-decoration: none;
+  top: 0px;
+  z-index: 100;
+}
+
+div.menubar a.menubar-menubutton:hover {
+  background-color: transparent;
+  border-color: #f0f0f0 #909090 #909090 #f0f0f0;
+  color: #000000;
+}
+
+div.menubar a.menubar-menubutton-active,
+div.menubar a.menubar-menubutton-active:hover {
+  background-color: #669999;
+  border-color: #909090 #f0f0f0 #f0f0f0 #909090;
+  color: #ffffff;
+  left: 1px;
+  top: 1px;
+}
+
+div.menubar-menu {
+  margin: 0px;
+  border: 2px solid;
+  border-color: #f0f0f0 #909090 #909090 #f0f0f0;
+  padding: 4px 2px 4px 2px;
+  text-align: left;
+}
+
+a.menubar-menuitem {
+  font-family: Verdana, Arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  color: #000000;
+}
+
+div.menubar-menu {
+  background-color: #DFDFDF;
+  border: 2px solid;
+  border-color: #f0f0f0 #909090 #909090 #f0f0f0;
+  left: 0px;
+  padding: 0px 1px 1px 0px;
+  position: absolute;
+  top: 0px;
+  visibility: hidden;
+  z-index: 101;
+}
+
+div.menubar-menu a.menubar-menuitem {
+  color: #000000;
+  cursor: default;
+  display: block;
+  padding: 0px 1em;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+div.menubar-menu a.menubar-menuitem:hover, div.menubar-menu a.menubar-menuitemHighlight {
+  background-color: #669999;
+  color: #ffffff;
+}
+
+div.menubar-menu a.menubar-menuitem span.menubar-menuitem-text {}
+
+div.menubar-menu a.menubar-menuitem span.menubar-menuitem-arrow {
+  margin-right: -.75em;
+}
+
+div.menubar-menu div.menubar-menuitem-sep {
+  border-top: 1px solid #909090;
+  border-bottom: 1px solid #f0f0f0;
+  margin: 4px 2px;
+}
+
+
+
+/* Begin Content pane styles */
+.content {
+	margin: 0px;
+	background-color: #F8F8F8;
+	padding: 10px 6px;	
+}
+
+.content .content-buttonbar {
+	border-left: 0px;
+	border-right: 0px;
+	border-bottom: 0px;
+	border-top: #336666 1px solid;
+	margin-top: 10px;
+}
+
+.content .content-buttonbar input{
+	margin-right: 4px;
+}
+
+.content .required-field-text {
+	margin-top: 10px;
+	margin-left: 5px;
+	display:block;
+	background-color: white;
+}
+
+.content img { border: none }
+
+
+.content input button {
+	/* from cuesControls.css: .cuesButtonRow */
+	margin: 0 0 0 3px;
+	cursor:pointer
+}
+
+.content button {
+	/* from cuesControls.css: .cuesButtonRow */
+	margin: 0 0 0 3px;
+	cursor:pointer
+}
+
+.content .content-nogroove {
+	font-weight: bold;
+	border: none;
+}
+
+.content .content-banner {
+	padding: 0px;
+	font-weight: bold;
+	color: #296563;
+	border: 1px solid #296563;
+}
+
+.content .indent {
+	margin-left: 20px;
+}
+
+
+.content table{
+	background-color:#F8F8F8;
+}
+.content table caption {
+	font-size: 0.7em;
+	text-align: left;
+	font-family: Verdana;
+	font-weight : bold;
+	color: #336666;
+	padding:4px 8px 4px 8px;
+	font-weight: bold;
+	text-align: left;
+	margin-top: 10px;
+	padding: 4px;
+	width: 100%;
+}
+
+
+.content .content-td-button {
+    vertical-align: middle;
+}
+
+.content fieldset legend {
+	font-family: Verdana;
+	font-weight: bold;
+	color: #000000;
+	text-align: left;
+}
+
+.content fieldset
+{
+	margin-top: 10px;
+	padding: 6px;
+	border: #000000 solid 1px;
+}
+
+.content fieldset table { border: 0px; }
+
+.content fieldset td {
+	vertical-align: text-top;
+}
+
+#pageBanner { color: red;}
+/*End Content Pane Styles */
+
+/* Begin Content Grid Styles */
+.content-grid 
+{
+	border: 1px solid gray;
+}
+
+table.content-grid{
+	background-color:#F8F8F8;
+	border:1px solid #858A91;
+	width: 100%;
+}
+
+
+table.content-grid  caption {
+	font-size: 0.7em;
+	text-align: left;
+	font-family: Verdana;
+	font-weight : bold;
+	color: #FFFFFF;
+	padding:2px 8px 2px 8px;
+	width: 100%;
+	background-color: #808DB3;
+	line-height:16px;
+	border-top: 1px solid #858A91;
+	border-left: 1px solid #858A91;
+	border-right: 1px solid #858A91;
+}
+
+
+.content-grid th {
+	background-color: #B5BDD7;	
+        font-family: Verdana;
+	color: #000000;
+	padding: 2px 8px;
+	text-align:center;
+	vertical-align:middle;
+	line-height:14px;
+	/*border-bottom:1px solid #F8F8F8;*/
+	border-top:1px solid #F8F8F8;
+	border-right:1px solid #F8F8F8;
+}
+
+.content-grid .content-grid-th-copy {
+	text-align: center;
+	font-weight: normal;
+	border: 0px;
+}
+.content-grid .content-grid-th-delete {
+	text-align: center;
+	font-weight: normal;
+	/*border-right:1px solid #F8F8F8;
+	border-bottom:1px solid #F8F8F8;*/
+	width: 10px;
+}
+
+.content-grid th a:link,
+.content-grid th a:visited,
+.content-grid th a:hover,
+.content-grid th a:active {
+	color: #000000;
+	text-decoration: none;
+	font-weight: normal;
+}
+.content-grid th a.content-grid-primarysort:link,
+.content-grid th a.content-grid-primarysort:visited,
+.content-grid th a.content-grid-primarysort:hover,
+.content-grid th a.content-grid-primarysort:active {
+	vertical-align:middle;
+	font-weight: bold;
+	color: #000000;
+	text-decoration: none;
+}
+
+.content-grid-secondarysort:link,
+.content-grid-secondarysort:visited,
+.content-grid-secondarysort:hover,
+.content-grid-secondarysort:active {
+	color: #000000;
+	text-decoration: none;
+}
+
+
+.content-grid td {
+	/* from cuesControls.css: cuesTableBg td */
+	padding: 2px 8px;
+	vertical-align: middle;
+	line-height: 15px;
+	
+	font-family: Verdana;
+	font-weight: normal;
+}
+
+.content-grid .content-grid-td-copy {
+	text-align: center;
+}
+.content-grid .content-grid-td-delete {
+	width: 10px;
+	text-align: center;
+}
+.content-grid .content-grid-button {
+}
+.content-grid .content-grid-button-image {
+	vertical-align: text-bottom;
+}
+
+.content-grid .search-find td{
+	padding: 8px;
+}
+
+.content-grid .search-find input {
+	margin: 1px;
+}
+
+.content-grid .content-pageflipper tr {
+	margin: 4px;
+}
+
+.content-grid .content-pageflipper td {
+	background-color: #F8F8F8;
+	border-top:1px solid #858A91;
+	padding: 8px;
+	font-family: Verdana;
+	font-weight: normal;
+}
+.content-grid .content-pageflipper input {
+	padding: 1px;
+	vertical-align: middle;
+}
+
+.content-grid .content-pageflipper select {
+	padding: 1px;
+}
+
+a.content-grid-link:link {color: #333399; text-decoration: underline;} 
+a.content-grid-link:visited {color: #993366; text-decoration: underline;}
+a.content-grid-link:hover {color: #333399; text-decoration: underline;}
+a.content-grid-link:active {color: #333399; text-decoration: underline;}
+
+.content-grid .content-pageflipper img {
+	vertical-align: middle;
+}
+
+.content-grid .content-grid-nostripe {
+	background-color: #F8F8F8;
+} 
+
+.content-grid .content-grid-nostripe td {
+	border-bottom: 1px solid #DFDFDF;
+	border-right: 1px solid #DFDFDF;
+}
+
+.content-grid .content-grid-stripe-dark {
+	background-color: #EBEBEB;
+} 
+
+.content-grid .content-grid-stripe-light {
+	background-color: #F8F8F8;
+}
+
+
+/* End Content Grid Styles */
+
+/* Begin Content Form Styles */
+
+.content .content-form .content-form-button {
+	font-weight: bold;
+}
+
+.content .content-form td{
+	vertical-align: top;
+}
+
+.content .content-form textarea{
+	font-family: verdana, tahoma, arial, sans-serif;
+}
+
+.content .content-panel td{
+	vertical-align: top;
+}
+
+.content .content-form .content-form-stripe-dark {
+	background-color: #EFEFEF;
+} 
+
+.content .content-form .content-form-stripe-light {
+	background-color: #ffffff;
+}
+
+.content .content-form .content-form-td-centered{
+	vertical-align: middle;
+}
+
+.content .content-form .required-field-text {
+}
+/* End Content Form Styles */
+
+button.content-pageflipper-button {
+	vertical-align: middle;
+}
+
+
+a.content-pageflipper-button {
+	color: black;
+	text-decoration: none;
+}
+
+a.content-pageflipper-img {
+	color: black;
+	text-decoration: none;
+}
+
+a.content-pageflipper-link {
+	color: blue;
+}
+.content-pageflipper a{
+	color: blue;
+}
+
+img.content-pageflipper-button-image {
+	vertical-align: middle;
+}
+
+input.content-pageflipper-button {
+	vertical-align: middle;
+}
+
+.content-jumpmenu {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	text-align: right;
+	margin: 0px;
+	padding: 4px 6px;
+}
+.content-jumpmenu .label {
+}
+.content-jumpmenu input {
+}
+.content-jumpmenu select {
+}
+
+
+/* Begin Schedule Grid Styles */
+
+.schedule-grid 
+{
+	border: 2px solid gray;
+}
+
+.schedule-grid th {
+	text-align: center;
+	font-weight: normal;
+	border: 0px;
+	color: #000000;
+	background-color: #DFDFDF;
+	border-left: 1px solid #FFFFFF;
+	border-right: 1px solid #818686;
+	padding: 2px 10px 2px 10px;
+}
+.schedule-grid .schedule-grid-time {
+	text-align: center;
+	font-weight: normal;
+	border: 0px;
+	color: #000000;
+	background-color: #DFDFDF;
+	border-top: 1px solid #FFFFFF;
+	border-bottom: 1px solid #818686;
+}
+
+.schedule-grid .schedule-grid-stripe-dark {
+	border-left: 1px solid #FFFFFF;
+	border-right: 1px solid #818686;
+	border-top: 1px solid #FFFFFF;
+	border-bottom: 1px solid #818686;
+	background-color: #EFEFEF;
+} 
+
+.schedule-grid .schedule-grid-stripe-light {
+	border-left: 1px solid #FFFFFF;
+	border-right: 1px solid #818686;
+	border-top: 1px solid #FFFFFF;
+	border-bottom: 1px solid #818686;
+	background-color: #F8F8F8;
+}
+
+.schedule-grid .schedule-grid-stripe-selected {
+	border-top: 1px solid #FFFFFF;
+	border-bottom: 1px solid #818686;
+	border-left: 1px solid #FFFFFF;
+	border-right: 1px solid #818686;
+	text-align: center;
+	color: #FFFFFF;
+	background-color: #336666;
+} 
+
+/* End Schedule Grid */
+
+/*  style for tree control - single frame (SF)  */
+.SFtree-control {
+  background-color: #ffffff;
+  color: #336699;
+  font-family: verdana, arial, geneva, helvetica, sans-serif;
+  line-height: 1.0;
+  vertical-align: top;
+}
+
+table.SFtree-control {
+	width: 100%;
+	border-collapse: collapse;
+	padding: 2px;
+}
+
+/* selected style for a tree control node*/ 
+.SFtree-control-selected {
+  color: #FFFFFF;
+  background-color: #629797;
+}
+
+/* unselected style for a tree control node */
+.SFtree-control-unselected a{
+  color: #336699;
+  font-weight: normal;
+  text-decoration: none;
+}
+
+.SFtree-control-selected a{
+  color: #FFFFFF;
+  font-weight: normal;
+  text-decoration: none;
+}
+
+table td.SFtree-control-folder {
+	border-top: 1px solid #D6D3CE;
+}
+
+table td.SFtree-control-root {
+	border-top: 2px solid #D6D3CE;
+	font-weight: bold;
+}
+
+table td.SFtree-control-root a {
+	font-weight: bold;
+}
+
+#udm a.nohrefdisabled {
+	border-color:#f8fbd0 !important;
+	color: Gray !important;
+}
+#udm a {
+	font-size: 1.0em !important;
+}
+
+
+/* UE TEAM STYLESHEET */
+
+/* Tab */
+.cuesTableBg .cuesTableBgCb {width: 10px;} 
+.cuesTabContentRowBg  {background-repeat:repeat-x; background-position:100%; background-image:url('tabAreaBg.gif'); width:100%;  padding: 0; margin:0}
+.cuesTabNavRowBg      {background-color:#6b7485;border-bottom:1px solid #dbdbdb; border-right:1px solid #858A91; border-left:1px solid #858A91; width:100%; margin:0; padding:0}
+.cuesTabContentOff    {background-position:100%;background-image:url('tabContentOffBg.gif'); padding: 0 3px 0 6px; font-size: 0.6em; cursor:pointer}
+.cuesTabContentOn     {background-position:100%;background-image:url('tabContentOnBg.gif'); padding: 3px 2px 0 6px; font-size: 0.6em; font-weight:bold;}
+a.cuesTabLink:link    {color: #000000; text-decoration: none;} 
+a.cuesTabLink:visited {color: #000000; text-decoration: none;}
+a.cuesTabLink:hover   {color: #000000; text-decoration: none;}
+a.cuesTabLink:active  {color: #000000; text-decoration: none;} 
+.cuesTabNavGapBelow   {font-size:1px;line-height:8px;}
+
+/* Form Controls */
+form {display:inline}
+/*input, select, optgroup, option, textarea, button{font-family: Verdana; font-size: 1em;}*/
+.cuesCheckbox {vertical-align:middle}
+.invisibleLabel {display:none}
+.cuesErroredControl {background-color: #FFFFCC;}
+.cuesErrorBox {border:1px solid #CC0000; padding:8px; margin:8px; color:#CC0000}
+.cuesErrorText {color:#CC0000}
+
+/* Group Box */
+fieldset {padding:0; border:1px solid #000000;}
+.cuesGroupBox1OnRow {margin:8px 8px 0 8px}
+.cuesGroupBoxTitle {font-family: Verdana; font-size: 1em; color: #000000; font-weight:bold;}
+
+/* Status Box */
+.cuesStatusBox {padding:4;border:1px solid #858A91;}
+.cuesStatusBoxError {padding:4;border:2px solid #CC0000;}
+.cuesStatusBoxTitle {font-family: Verdana; font-size: 1em; color: #000000; font-weight:bold;}
+
+/* Buttons */
+#cuesButtonRowLeft, #cuesButtonRowRight {position: relative; text-align:right; margin:0; padding:0 8px 8px 8px}
+.cuesButtonRow {text-align:right; margin:0; padding:0}
+.cuesButton { font-size: 1em; margin: 0 0 0 3px; cursor:pointer}
+
+/* Table */
+.cuesTableTitleBg {width: 100%; background-color: #C5CDDF;  border:1px solid #858A91; veritical-align:middle;}
+.cuesTableTitle { font-weight : bold; color:#000000; padding:4px 8px; vertical-align:middle;}
+.cuesTableTitleItem {font-style:italic;  padding:4px 8px; font-weight : bold; color:#000000; veritical-align:middle;}
+.cuesTableTitleButtonRow {margin:0; padding:2px 8px; vertical-align:middle;}
+.cuesTableFilterArea {background-color: #F8F8F8; border-left:1px solid #858A91; border-right:1px solid #858A91; border-top:1px solid #858A91; margin-top:-1px; padding:8px}
+.cuesTableFilterAreaTd {background-color: #F8F8F8; }
+.cuesTableBg {background-color:#F8F8F8; border-left:1px solid #858A91; border-right:1px solid #858A91; border-bottom:1px solid #858A91;}
+.cuesTableBg th {background-color: #DBDBDB; border-right:1px solid #F8F8F8;  border-bottom:1px solid #F8F8F8; font-family: Verdana; font-size: 0.6em; font-weight:normal; padding:2px 8px; text-align:center; vertical-align:middle;}
+.cuesTableColumnHeaderSorted { font-weight: bold;  }
+.cuesTableBg td  {padding:2px 8px; vertical-align:top;}
+.cuesTableBgTree {background-color:#F8F8F8; border-left:1px solid #858A91; border-right:1px solid #858A91; border-bottom:1px solid #858A91;}
+.cuesTableBgTree td  {padding:2px 8px; vertical-align:middle; border-bottom:1px solid #858A91;}
+.cuesTableRowOdd {background-color: #F8F8F8; border-left:1px solid #858A91; border-right:1px solid #858A91;}
+.cuesTableRowEven {background-color: #EBEBEB; border-left:1px solid #858A91; border-right:1px solid #858A91;}
+.cuesTableRowSelected {background-color: #C0D5D5; }
+.cuesTableButtonArea {width:100%; background-color: #F8F8F8; border-left:1px solid #858A91; border-right:1px solid #858A91; border-bottom:1px solid #858A91;}
+.cuesTableButtonArea td  {padding:8px;}
+
+/* Nav Area */
+.cuesNavTitle {background-color:#6b7485;border-bottom:1px solid #858A91;width:100%;margin:0px;padding:4px 11px;font-family:Verdana;font-size:1.1em;color:#ffffff;font-weight:bold;}
+
+/* Content Area*/
+#cuesContentBg {position:static; height:100%; background-color: #F8F8F8; border:1px solid #858A91;}
+* html #cuesContentBg {width:100%;}
+#cuesContentTitleBg {position:absolute; top:0; left:0; right:1px; height:29px; max-height:29px; border-top:1px solid #858A91;  border-right:1px solid #858A91; border-left:1px solid #858A91;  overflow:hidden; background-color: #6B7485; margin:0; padding: 6px 0 0 0;}
+* html #cuesContentTitleBg {width:101%;}
+.cuesContentTitle {height:28px;background-color:#6b7485;font-family:Verdana;font-size:1.1em;font-weight:bold;color:#FFFFFF;padding-left:5px;padding-top:6px;}
+#cuesContentBodyBg {position:fixed; top:29px; left: 0; right:1px; bottom: 1px; overflow:auto; background-color: #F8F8F8; padding:8px}
+* html #cuesContentBodyBg {width:100%; height:100%;}
+
+/* Drawer Area*/
+.cuesDrawersContainer   {line-height:18px;overflow:hidden;background-color:#DBDBDB;border-top:1px solid #858A91;padding:0;}
+.cuesDrawer             {font-family: Verdana;font-size:8pt;color:#000000;height:27px;padding:0;cursor:pointer;vertical-align:middle;background-repeat:repeat-x;background-image:url('drawerBg.gif');}
+.cuesDrawerContent      {background-color:#f8f8f8;overflow:auto;border-bottom:1px solid #858A91;}
+.cuesDrawerIcon         {margin:0 6px 0 0;vertical-align:middle}
+.cuesDrawerIconNoChild  {margin:5px 6px 6px 21px;vertical-align:middle}
+.cuesSelectedDrawerItem {margin-left:-38px;background-color:#C0D5D5;font-family:Verdana;font-size:8pt;padding:0px;}
+.cuesNormalDrawerItem   {margin-left:-38px;background-color:#F8F8F8;font-family:Verdana;font-size:8pt;padding:0px;}
+.cuesNormalTreeDrawerItem   {background-color: #F8F8F8;font-family:Verdana;font-size:8pt;padding:0px;}
+.cuesSelectedTreeDrawerItem {background-color: #C0D5D5;font-family:Verdana;font-size:8pt;padding:0px;}
+a.cuesDrawerLink:link           {color:#000000;text-decoration:none;font-family:Verdana;font-size:8pt;} 
+a.cuesDrawerLink:visited        {color:#000000;text-decoration:none;font-family:Verdana;font-size:8pt;}
+a.cuesDrawerLink:hover          {color:#000000;text-decoration:none;font-family:Verdana;font-size:8pt;}
+a.cuesDrawerLink:active         {color:#000000;text-decoration:none;font-family:Verdana;font-size:8pt;} 
+a.cuesDrawerItemLink:link       {color:#000000;text-decoration:none;font-family:Verdana;font-size:8pt;} 
+a.cuesDrawerItemLink:visited    {color:#000000;text-decoration:none;font-family:Verdana;font-size:8pt;}
+a.cuesDrawerItemLink:hover      {color:#333399;text-decoration:none;font-family:Verdana;font-size:8pt;}
+a.cuesDrawerItemLink:active     {color:#000000;text-decoration:none;font-family:Verdana;font-size:8pt;} 
+.cuesDrawerScrollerDown         {border-top:1px solid #858A91;}
+.cuesDrawerScrollerUp           {border-bottom:1px solid #858A91; }
+
+/* Header Area*/
+.cuesHeaderBg {width:100%;background-image:url('headerBgGradient.gif'); }
+.cuesHeaderBgLTR {width:100%;background-image:url('headerBgGradient.gif'); }
+.cuesHeaderBgRTL {width: 100%;background-position:right;background-image:url('headerBgGradientRTL.gif'); }
+.cuesHeaderAccent {background: #FFFFFF; height:8px} 
+.cuesHeaderTitleLogo {font-weight:bold; font-family: Verdana; font-size: 13pt; color: #2F6681;}
+.cuesHeaderTitleLogoSubtitle {font-weight:bold; font-family: Verdana; font-size: 8pt; color: #2F6681;}
+.cuesHeaderTitleChromeNoLogo {font-weight:bold; font-size: 1.05em; color: #003333; padding:0 12px; height:42px}
+.cuesHeaderTitleChromelessNoLogo {font-weight:bold; font-size: 0.95em; color: #003333; padding:0 12px; height:31px}
+.cuesHeaderText {color: #FFFFFF; font-family: Verdana; padding:0 12px;}
+.cuesHeaderTextBold {color: #FFFFFF; font-family: Verdana; padding:0 12px;font-weight:bold;}
+a.cuesHeaderLink:link {color: #FFFFFF; font-family: Verdana; text-decoration: none; padding:0 12px;} 
+a.cuesHeaderLink:visited {color: #FFFFFF; font-family: Verdana; text-decoration: none; padding:0 12px;}
+a.cuesHeaderLink:hover {color: #FFFFFF; font-family: Verdana; text-decoration: underline; padding:0 12px;}
+a.cuesHeaderLink:active {color: #FFFFFF; font-family: Verdana; text-decoration: none; padding:0 12px;} 
+a.cuesHeaderLinkBold:link {color: #FFFFFF; font-family: Verdana; text-decoration: none; padding:0 12px;font-weight:bold;} 
+a.cuesHeaderLinkBold:visited {color: #FFFFFF; font-family: Verdana; text-decoration: none; padding:0 12px;font-weight:bold;}
+a.cuesHeaderLinkBold:hover {color: #FFFFFF; font-family: Verdana; text-decoration: underline; padding:0 12px;font-weight:bold;}
+a.cuesHeaderLinkBold:active {color: #FFFFFF; font-family: Verdana; text-decoration: none; padding:0 12px;font-weight:bold;} 
+.cuesHeaderNavArea {color:#FFFFFF;padding-left:4px;padding-right:4px;padding-bottom:4px;font-family: Verdana; font-size: 8pt; }
+
+/* Toolbar */
+.cuesToolbarBgGradient {position: relative; width:100%; padding-left: 2px; background-image:url('toolbarGradient.gif'); border-top:1px solid #858A91;}
+.cuesToolbarCell {padding: 0 7px; cursor:pointer}
+.cuesToolbarEmptyCell {padding: 0 0 0 6px; cursor:pointer}
+.cuesToolbarCellDisabled {padding: 0 7px; cursor:default}
+.cuesToolbarEmptyCellDisabled {padding: 0 0 0 6px; cursor:default}
+.cuesToolbarIcon {margin: 0 6px 0 0;  vertical-align:middle}
+a.cuesToolbarLink:link       {color: #000000; text-decoration: none;} 
+a.cuesToolbarLink:visited    {color: #000000; text-decoration: none;}
+a.cuesToolbarLink:hover      {color: #000000; text-decoration: none;}
+a.cuesToolbarLink:active     {color: #000000; text-decoration: none;} 
+
+/* Breadcrumb Area*/
+#cuesBreadcrumbTable td      {font-family:Verdana;color:#ffffff;}
+.cuesBreadcrumbStatic        {font-family:Verdana;color:#ffffff;}
+.cuesBreadcrumbLast          {font-weight:bold;font-size:1.1em;color:#ffffff;}
+a.cuesBreadcrumbLink:link    {color:#ffffff;}
+a.cuesBreadcrumbLink:visited {color:#ffffff;}
+a.cuesBreadcrumbLink:hover   {color:#ffffff;}
+a.cuesBreadcrumbLink:active  {color:#ffffff;}
+
+/* Layout */
+#cuesLayoutTogglerArea {background-color:#dbdbdb;border-width:1px 0px;border-color:#858A91;border-style:none;}
+#cuesLayoutNavArea     {background-color:#dbdbdb;border-width:1px;border-color:#858A91;border-style:solid;}
+#cuesLayoutContentArea {background-color:#dbdbdb;border-width:1px;border-color:#858A91;border-style:solid;}
+
+/* Rules */
+.cuesHR {height:1px;color:#858A91;}
+
+/* Login Area*/
+.cuesLoginCopyright   {background-color:#ffffff;color:#000000;font-family: Verdana;}
+.cuesLoginVersionInfo {font-weight:bold;font-size:9pt;color:#ffffff;font-family: Verdana;}
+.cuesLoginProductName {font-weight:bold;font-size:16pt;color:#ffffff;font-family: Verdana;}
+.cuesLoginButton      {background-color:#2F6681;color:#ffffff;border-top:1px solid #9ecece;border-left:1px solid #9ecece;border-right:1px solid #003333;border-bottom:1px solid #003333;font-family: Verdana;}
+.cuesLoginField       {color:#ffffff;font-family: Verdana;}
+.cuesLoginTable {
+	border: 0;
+	background-color: white;
+}
+
+
+#cuesPopupMask {position:absolute;z-index:200;top:0px;left:0px;width: 100%;	height: 100%;	background-image/**/: url('spacer.gif') !important;background-repeat:repeat;visibility:hidden}
+
+/* Toolbar */
+.toolbar {position:relative; padding-left:2px; background-image:url(/ccmadmin/themes/VtgBlaf/toolbarGradient.gif); background-repeat: repeat-x; border-top:1px solid #858A91; font-family: Arial, sans-serif;}
+.toolbarCell {padding: 0 3px; cursor:pointer; }
+.toolbarEmptyCell {padding: 0 0 0 6px; cursor:pointer}
+.toolbarCellDisabled {padding: 0 7px; cursor:default}
+.toolbarEmptyCellDisabled {padding: 0 0 0 6px; cursor:default}
+.toolbarIcon {margin: 0 3px 0 0;  vertical-align:middle}
+a.toolbarLink:link       {color: #000000; text-decoration: none;} 
+a.toolbarLink:visited    {color: #000000; text-decoration: none;}
+a.toolbarLink:hover      {color: #000000; text-decoration: none;}
+a.toolbarLink:active     {color: #000000; text-decoration: none;} 
+
+/* classes for custom UDM tooltips */
+#udm a span {
+ display: none;
+}
+ 
+#udm a {
+ position: relative;
+}
+ 
+#udm a:hover span {
+ display: block;
+ z-index:21000;
+ 
+ border:1px solid InfoText;
+ background-color:InfoBackground;
+ color:InfoText;
+ font:1.0em verdana,helvetica,sans-serif;
+ padding:2px 4px;
+ text-align:left;
+ position:absolute;
+ width:auto;
+ height:auto;
+}
+
+table.info {
+	empty-cells: show;
+	border-collapse: collapse;
+}
+
+table.info td.white {
+	color: white;
+	background-color: #2f4f4f;
+}
+
+table td.center-bold {
+	text-align: center;
+	font-weight: bold;
+}
+
+th.left {
+	text-align: left;
+}
+
+th.right {
+	text-align: right;
+}
