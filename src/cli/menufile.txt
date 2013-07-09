@@ -1,0 +1,4 @@
+a:Execute Analyzer
+b:Change Directory
+c:Clear Screen
+x:Exit
