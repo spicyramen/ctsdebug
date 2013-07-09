@@ -1,4 +1,6 @@
-CTS Diagnostics 0.1(1002)
+#!/usr/bin/perl -w
+
+CTS Diagnostics 0.1
 Author: Gonzalo Gasca
 Cisco Systems, Inc
 TelePresence Exchange Business Unit
@@ -144,5 +146,5 @@ service httpd start
 go to main.html and verify your CTS Analyzer is running
 
 
-All contents are Copyright © 2011 Cisco Systems, Inc. All rights reserved.
+All contents are Copyright ï¿½ 2011 Cisco Systems, Inc. All rights reserved.
 Important Notices and Privacy Statement. 
